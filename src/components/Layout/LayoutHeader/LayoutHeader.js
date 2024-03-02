@@ -3,22 +3,13 @@ import { Toolbar } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import {
-  useLayoutSidebar,
   useLayoutHeader,
   useHeaderTheme,
 } from "../../../hooks/hooks";
 
-const LayoutHeader = ({ children, sx }) => {
-  const { sidebarOptions } = useLayoutSidebar();
+const LayoutHeader = ({ children }) => {
   const { headerOptions } = useLayoutHeader();
   const { headerTheme } = useHeaderTheme();
-
-  const extraSx = React.useMemo(() => {
-    if (sx) {
-      const { width, ml, transition, zIndex, ...restSx } = sx;
-      return restSx;
-    }
-  }, [sx]);
 
   const headerMarginLeft = React.useMemo(() => {
     if (!headerOptions.fixed) {

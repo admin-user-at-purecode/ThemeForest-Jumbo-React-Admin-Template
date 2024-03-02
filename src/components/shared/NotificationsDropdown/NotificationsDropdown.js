@@ -14,7 +14,7 @@ import NotificationBirthday from './NotificationBirthday';
 import NotificationInvitation from './NotificationInvitation';
 import NotificationSharedPost from './NotificationSharedPost';
 import NotificationPost from './NotificationPost';
-import { notifications } from './fake-data';
+import { notifications } from '../../../mock_data/notifications';
 import CustomIconButton from '../../CustomIconButton/CustomIconButton';
 import DdPopover from '../../DdPopover/DdPopover';
 import Div from '../Div/Div';

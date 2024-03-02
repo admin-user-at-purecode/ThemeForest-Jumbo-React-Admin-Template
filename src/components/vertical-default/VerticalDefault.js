@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../Layout/Layout";
-import Header from "../headers";
-import Sidebar from "../shared/Sidebar";
-import Footer from "../footers";
+import Header from "../Header";
+import Sidebar from "../Sidebar";
+import Footer from "../Footer";
 
 const VerticalDefault = ({children}) => {
 

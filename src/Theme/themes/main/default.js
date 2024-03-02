@@ -10,7 +10,6 @@ export const mainTheme = {
             xl: 1200,
         }
     },
-
     palette: {
         primary: {
             main: '#7352C7',

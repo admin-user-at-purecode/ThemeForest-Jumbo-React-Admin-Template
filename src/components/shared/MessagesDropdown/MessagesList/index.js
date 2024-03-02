@@ -1,7 +1,7 @@
 import React from 'react';
 import List from "@mui/material/List";
 import MessageItem from "./MessageItem";
-import messages from "./fake-data";
+import messages from "../../../../mock_data/messages";
 
 const MessagesList = () => {
     return (

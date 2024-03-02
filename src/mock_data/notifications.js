@@ -1,4 +1,4 @@
-import { getCustomDateTime } from "../../../utils/constants/formatHelpers";
+import { getCustomDateTime } from "../utils/constants/formatHelpers";
 
 export const notifications = [
     {

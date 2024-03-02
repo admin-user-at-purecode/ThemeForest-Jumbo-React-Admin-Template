@@ -49,7 +49,7 @@ const NavCollapsible = ({item}) => {
     const subMenus = (item.children && item.children.length > 0) ? item.children : null;
 
     return (
-        <React.Fragment>
+        <>
             <ListItemButton
                 component={"li"}
                 onClick={() => setOpen(!open)}
@@ -144,7 +144,7 @@ const NavCollapsible = ({item}) => {
                     </List>
                 </Popover>
             }
-        </React.Fragment>
+        </>
     )
 };
 

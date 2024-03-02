@@ -1,12 +1,12 @@
 import React from "react";
 import { IconButton } from "@mui/material";
 import menus from "./menus";
-import VerticalNavbar from "../../VerticalNavbar/VerticalNavbar";
-import { DrawerHeader } from "../../Layout/style";
-import Scrollbar from "../../Scrollbar/Scrollbar";
-import { useLayoutSidebar, useSidebarTheme } from "../../../hooks/hooks";
-import { SIDEBAR_STYLES, SIDEBAR_VIEWS } from "../../../utils/constants/layout";
-import Logo from "../Logo/Logo";
+import VerticalNavbar from "../VerticalNavbar/VerticalNavbar";
+import { DrawerHeader } from "../Layout/style";
+import Scrollbar from "../Scrollbar/Scrollbar";
+import { useLayoutSidebar, useSidebarTheme } from "../../hooks/hooks";
+import { SIDEBAR_VIEWS } from "../../utils/constants";
+import Logo from "../shared/Logo/Logo";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import Zoom from "@mui/material/Zoom";
 

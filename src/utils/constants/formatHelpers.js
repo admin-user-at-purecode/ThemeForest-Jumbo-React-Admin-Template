@@ -1,7 +1,5 @@
 import moment from 'moment';
 
-
-
 export const getDateElements = date => {
     const dateString = moment(date).format('dddd, MMMM DD YYYY, hh:mm A');
     const dateSections = dateString.split(',');

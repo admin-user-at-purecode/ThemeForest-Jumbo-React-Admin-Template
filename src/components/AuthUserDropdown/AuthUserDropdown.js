@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from "@mui/material/Avatar";
-import { authUser } from './fake-db';
+import { authUser } from '../../mock_data/user';
 
 import {ListItemIcon, ListItemText, ThemeProvider, Typography} from "@mui/material";
 import Divider from "@mui/material/Divider";
