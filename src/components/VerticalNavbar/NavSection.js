@@ -1,16 +1,8 @@
 import React from 'react';
 import ListSubheader from "@mui/material/ListSubheader";
 import NavIdentifier from './NavIdentifier';
-import {useLayoutSidebar} from '../../hooks/hooks';
-import { SIDEBAR_VIEWS } from '../../utils/constants/layout';
 
 const NavSection = ({item}) => {
-    const {sidebarOptions} = useLayoutSidebar();
-
-    const isMiniAndClosed = React.useMemo(() => {
-        return sidebarOptions?.view === SIDEBAR_VIEWS.MINI && !sidebarOptions?.open;
-    }, [sidebarOptions.view, sidebarOptions.open]);
-
     const label = item.label
 
     if (!item || !item.label) return null;
@@ -20,7 +12,6 @@ const NavSection = ({item}) => {
     return (
         <>
             {
-                !isMiniAndClosed &&
                 <ListSubheader
                     component="li"
                     disableSticky

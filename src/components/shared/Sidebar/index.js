@@ -30,8 +30,7 @@ const SidebarHeader = () => {
   }, [sidebarOptions.view, sidebarOptions.open]);
 
   return (
-    <React.Fragment>
-      {sidebarOptions?.style !== SIDEBAR_STYLES.CLIPPED_UNDER_HEADER && (
+    <>
         <DrawerHeader>
           <Logo mini={isMiniAndClosed} mode={sidebarTheme.type} />
           {sidebarOptions?.view !== SIDEBAR_VIEWS.MINI && (
@@ -48,8 +47,7 @@ const SidebarHeader = () => {
             </Zoom>
           )}
         </DrawerHeader>
-      )}
-    </React.Fragment>
+    </>
   );
 };
 

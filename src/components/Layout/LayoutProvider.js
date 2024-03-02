@@ -2,13 +2,11 @@ import React from "react";
 
 import {
   LayoutSidebarContext,
-  LayoutRootContext,
   LayoutHeaderContext,
 } from "../../Context/context";
 import { useMediaQuery } from "@mui/material";
 import {
   LAYOUT_ACTIONS,
-  SIDEBAR_SCROLL_TYPES,
   SIDEBAR_STYLES,
   SIDEBAR_VARIANTS,
   SIDEBAR_VIEWS,
@@ -28,20 +26,8 @@ const init = (activeLayoutConfig) => {
       minWidth: 80,
       variant: SIDEBAR_VARIANTS.PERSISTENT,
       style: SIDEBAR_STYLES.FULL_HEIGHT,
-      scrollType: SIDEBAR_SCROLL_TYPES.FIXED,
       ...(activeLayoutConfig?.layoutOptions?.sidebar
         ? activeLayoutConfig?.layoutOptions?.sidebar
-        : {}),
-    },
-    footer: {
-      hide: false,
-      ...(activeLayoutConfig?.layoutOptions?.footer
-        ? activeLayoutConfig?.layoutOptions?.footer
-        : {}),
-    },
-    content: {
-      ...(activeLayoutConfig?.layoutOptions?.content
-        ? activeLayoutConfig?.layoutOptions?.content
         : {}),
     },
   };
@@ -56,15 +42,6 @@ const LayoutReducer = (state, action) => {
   const { previousOptions, ...currentOptions } = state;
 
   switch (action.type) {
-    case LAYOUT_ACTIONS.SET_HEADER_OPTIONS:
-      return {
-        ...state,
-        header: {
-          ...state?.header,
-          ...action?.payload,
-        },
-      };
-
     case LAYOUT_ACTIONS.SET_SIDEBAR_OPTIONS:
       let newSidebarOptions = {};
       let sidebarPreviousOptions = {};
@@ -118,39 +95,6 @@ const LayoutReducer = (state, action) => {
         },
       };
 
-    case LAYOUT_ACTIONS.SET_CONTENT_OPTIONS:
-      return {
-        ...state,
-        content: {
-          ...state?.content,
-          ...action?.payload,
-        },
-      };
-
-    case LAYOUT_ACTIONS.SET_FOOTER_OPTIONS:
-      return {
-        ...state,
-        footer: {
-          ...state?.footer,
-          ...action?.payload,
-        },
-      };
-
-    case LAYOUT_ACTIONS.SET_ROOT_OPTIONS:
-      return {
-        ...state,
-        root: {
-          ...state?.root,
-          ...action?.payload,
-        },
-      };
-
-    case LAYOUT_ACTIONS.SET_OPTIONS:
-      return {
-        ...state,
-        ...action.payload,
-      };
-
     default:
       return state;
   }
@@ -200,17 +144,6 @@ const LayoutProvider = ({ children }) => {
     [setLayoutOptions, isNotMobile]
   );
 
-  const setRootOptions = React.useCallback(
-    (options) => {
-      setLayoutOptions({
-        type: LAYOUT_ACTIONS.SET_ROOT_OPTIONS,
-        payload: options,
-        isMobile: !isNotMobile,
-      });
-    },
-    [setLayoutOptions, isNotMobile]
-  );
-
   const sidebarContextValue = React.useMemo(() => {
     return {
       sidebarOptions: layoutOptions?.sidebar,
@@ -226,21 +159,12 @@ const LayoutProvider = ({ children }) => {
     [layoutOptions?.header]
   );
 
-  const rootContextValue = React.useMemo(() => {
-    return {
-      rootOptions: layoutOptions?.root,
-      setRootOptions: setRootOptions,
-    };
-  }, [layoutOptions?.root]);
-
   return (
-    <LayoutRootContext.Provider value={rootContextValue}>
-      <LayoutSidebarContext.Provider value={sidebarContextValue}>
-        <LayoutHeaderContext.Provider value={headerContextValue}>
-              {children}
-        </LayoutHeaderContext.Provider>
-      </LayoutSidebarContext.Provider>
-    </LayoutRootContext.Provider>
+    <LayoutSidebarContext.Provider value={sidebarContextValue}>
+      <LayoutHeaderContext.Provider value={headerContextValue}>
+        {children}
+      </LayoutHeaderContext.Provider>
+    </LayoutSidebarContext.Provider>
   );
 };
 

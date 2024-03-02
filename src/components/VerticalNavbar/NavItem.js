@@ -4,8 +4,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import {ListItemIcon} from "@mui/material";
 import ListItemText from "@mui/material/ListItemText";
 import CircleIcon from '@mui/icons-material/Circle';
-import {useLayoutSidebar} from '../../hooks/hooks';
-import { SIDEBAR_VIEWS } from '../../utils/constants/layout';
 
 const menuBefore = {
     left: 0,
@@ -21,12 +19,6 @@ const menuBefore = {
 const NavItem = (props) => {
     const {item, isNested} = props
 
-    const {sidebarOptions} = useLayoutSidebar();
-
-    const isMiniAndClosed = React.useMemo(() => {
-        return sidebarOptions?.view === SIDEBAR_VIEWS.MINI && !sidebarOptions?.open;
-    }, [sidebarOptions.view, sidebarOptions.open]);
-
     const label = item.label
 
     if (!item) return null;
@@ -37,25 +29,24 @@ const NavItem = (props) => {
             sx={{
                 p: 0,
                 overflow: 'hidden',
-                borderRadius: isMiniAndClosed ? '50%' : '0 24px 24px 0',
-                margin: isMiniAndClosed ? '0 auto' : '0',
-                ...(isMiniAndClosed) ? {width: 40, height: 40, justifyContent: 'center'} : {},
-                ...(!isMiniAndClosed) ? {'&::before': menuBefore} : {},
+                borderRadius:  '0 24px 24px 0',
+                margin: '0',
+                ...{'&::before': menuBefore} ,
                 '&:hover': {
                     color: theme => theme.palette.nav.action.hover,
                     backgroundColor: theme => theme.palette.nav.background.hover,
-                    ...(!isMiniAndClosed) ? {'&::before': {
+                    ... {'&::before': {
                             ...menuBefore,
                             backgroundColor: theme => theme.palette.nav.tick.hover,
-                        }} : {}
+                        }}
                 },
                 ...(false) ? {
                     color: theme => theme.palette.nav.action.active,
                     backgroundColor: theme => theme.palette.nav.background.active,
-                    ...(!isMiniAndClosed) ? {'&::before': {
+                    ...{'&::before': {
                         ...menuBefore,
                             backgroundColor: theme => theme.palette.nav.tick.active,
-                    }}: {},
+                    }},
                 } : {},
             }}
         >
@@ -67,12 +58,11 @@ const NavItem = (props) => {
                       overflow: "hidden",
                       position: "relative",
                       color: 'inherit',
-                      p: theme => !isMiniAndClosed ? theme.spacing(1, 3.75) : 0,
-                      ...(isMiniAndClosed) ? {justifyContent: 'center'} : {},
+                      p: theme => theme.spacing(1, 3.75) ,
                   }}
             >
 
-                <ListItemIcon sx={{minWidth: isMiniAndClosed ? 20 : 32, color: 'inherit'}}>
+                <ListItemIcon sx={{minWidth:  32, color: 'inherit'}}>
                     {
                         isNested ?
                             <CircleIcon sx={{fontSize: 6, ml: 1}}/>
@@ -81,7 +71,6 @@ const NavItem = (props) => {
                     }
                 </ListItemIcon>
                 {
-                    !isMiniAndClosed &&
                     <ListItemText
                         primary={label}
                         sx={{

@@ -5,11 +5,10 @@ import { SIDEBAR_STYLES, SIDEBAR_VARIANTS, SIDEBAR_VIEWS} from '../../utils/cons
 import LayoutHeader from './LayoutHeader/LayoutHeader';
 import LayoutSidebar from './LayoutSidebar/LayoutSidebar';
 import Div from '../shared/Div/Div';
-import {useLayoutSidebar,useLayoutRoot} from '../../hooks/hooks';
+import {useLayoutSidebar} from '../../hooks/hooks';
 
 const Layout = (props) => {
     const {sidebarOptions} = useLayoutSidebar();
-    const {rootOptions} = useLayoutRoot();
 
     const contentMargin = React.useMemo(() => {
         if (sidebarOptions?.variant === SIDEBAR_VARIANTS.TEMPORARY) {
@@ -42,7 +41,6 @@ const Layout = (props) => {
                 minWidth: 0,
                 minHeight: '100%',
                 flexDirection: 'column',
-                ...rootOptions?.sx
             }}
             className="CmtLayout-root"
         >

@@ -3,8 +3,6 @@ import {ThemeContext} from '../Context/context';
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import ThemeHeader from './ThemeHeader/ThemeHeader';
 import ThemeSidebar from './ThemeSidebar/ThemeSidebar';
-import ThemeFooter from './ThemeFooter/ThemeFooter';
-
 
 const AppTheme = ({children, init}) => {
     const [theme, setTheme] = React.useState(init.main);
@@ -24,9 +22,7 @@ const AppTheme = ({children, init}) => {
             <ThemeProvider theme={themeContextValue.theme}>
                 <ThemeHeader init={init.header}>
                     <ThemeSidebar init={init.sidebar}>
-                        {/* <ThemeFooter init={init.footer}> */}
                             {children}
-                        {/* </ThemeFooter> */}
                     </ThemeSidebar>
                 </ThemeHeader>
             </ThemeProvider>
