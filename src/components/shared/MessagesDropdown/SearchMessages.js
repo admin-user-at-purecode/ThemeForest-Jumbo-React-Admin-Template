@@ -1,4 +1,4 @@
-import React from 'react';
+ 'react';
 import SearchIcon from "@mui/icons-material/Search";
 import { Search,SearchIconWrapper,StyledInputBase } from '../SearchGlobal/style';
 

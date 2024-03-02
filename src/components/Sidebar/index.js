@@ -1,4 +1,4 @@
-import React from "react";
+import { useMemo } from "react";
 import { IconButton } from "@mui/material";
 import menus from "./menus";
 import VerticalNavbar from "../VerticalNavbar/VerticalNavbar";
@@ -25,7 +25,7 @@ const SidebarHeader = () => {
   const { sidebarOptions, setSidebarOptions } = useLayoutSidebar();
   const { sidebarTheme } = useSidebarTheme();
 
-  const isMiniAndClosed = React.useMemo(() => {
+  const isMiniAndClosed = useMemo(() => {
     return sidebarOptions?.view === SIDEBAR_VIEWS.MINI && !sidebarOptions?.open;
   }, [sidebarOptions.view, sidebarOptions.open]);
 

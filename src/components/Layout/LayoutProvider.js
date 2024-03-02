@@ -1,5 +1,4 @@
-import React from "react";
-
+import { useReducer,useEffect,useCallback,useMemo } from "react";
 import {
   LayoutSidebarContext,
   LayoutHeaderContext,
@@ -101,7 +100,7 @@ const LayoutReducer = (state, action) => {
 };
 
 const LayoutProvider = ({ children }) => {
-  const [layoutOptions, setLayoutOptions] = React.useReducer(
+  const [layoutOptions, setLayoutOptions] = useReducer(
     LayoutReducer,
     {},
     init
@@ -109,7 +108,7 @@ const LayoutProvider = ({ children }) => {
 
   const isNotMobile = useMediaQuery("(min-width:1200px)");
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!isNotMobile) {
       setSidebarOptions({
         variant: SIDEBAR_VARIANTS.TEMPORARY,
@@ -122,7 +121,7 @@ const LayoutProvider = ({ children }) => {
     setSidebarOptions(layoutOptions.previousOptions.sidebar);
   }, [isNotMobile]);
 
-  const setHeaderOptions = React.useCallback(
+  const setHeaderOptions = useCallback(
     (options) => {
       setLayoutOptions({
         type: LAYOUT_ACTIONS.SET_HEADER_OPTIONS,
@@ -133,7 +132,7 @@ const LayoutProvider = ({ children }) => {
     [setLayoutOptions, isNotMobile]
   );
 
-  const setSidebarOptions = React.useCallback(
+  const setSidebarOptions = useCallback(
     (options) => {
       setLayoutOptions({
         type: LAYOUT_ACTIONS.SET_SIDEBAR_OPTIONS,
@@ -144,14 +143,14 @@ const LayoutProvider = ({ children }) => {
     [setLayoutOptions, isNotMobile]
   );
 
-  const sidebarContextValue = React.useMemo(() => {
+  const sidebarContextValue = useMemo(() => {
     return {
       sidebarOptions: layoutOptions?.sidebar,
       setSidebarOptions: setSidebarOptions,
     };
   }, [layoutOptions?.sidebar]);
 
-  const headerContextValue = React.useMemo(
+  const headerContextValue = useMemo(
     () => ({
       headerOptions: layoutOptions?.header,
       setHeaderOptions: setHeaderOptions,

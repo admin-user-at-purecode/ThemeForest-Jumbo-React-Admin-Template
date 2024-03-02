@@ -1,8 +1,8 @@
-import React from 'react';
+import { forwardRef } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import {useTheme} from '../../hooks/hooks';
 
-const Scrollbar = React.forwardRef((props, ref) => {
+const Scrollbar = forwardRef((props, ref) => {
     const {theme} = useTheme();
     const { renderTrackVertical, renderTrackHorizontal, disable, ...restProps} = props;
 

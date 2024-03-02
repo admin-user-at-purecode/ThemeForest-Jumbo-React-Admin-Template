@@ -1,4 +1,3 @@
-import React from "react";
 import AppProvider from "./components/AppProvider";
 import AppLayout from "./components/AppProvider/AppLayout";
 import AppTheme from "./Theme/AppTheme";

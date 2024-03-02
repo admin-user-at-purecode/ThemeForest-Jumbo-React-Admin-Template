@@ -1,4 +1,4 @@
-import React from 'react';
+ 'react';
 import NavSection from './NavSection';
 import NavCollapsible from './NavCollapsible';
 import NavItem from './NavItem';

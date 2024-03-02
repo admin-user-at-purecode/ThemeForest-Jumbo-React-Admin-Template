@@ -1,4 +1,3 @@
-import React from 'react';
 import Avatar from "@mui/material/Avatar";
 import { authUser } from '../../mock_data/user';
 
@@ -10,7 +9,7 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import RepeatOutlinedIcon from '@mui/icons-material/RepeatOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
-import DdPopover from '../DdPopover/DdPopover';
+import DpPopover from '../DpPopover/DpPopover';
 import Div from '../shared/Div/Div';
 import {useTheme} from '../../hooks/hooks';
 
@@ -19,7 +18,7 @@ const AuthUserDropdown = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <DdPopover
+            <DpPopover
                 triggerButton={
                     <Avatar
                         src={authUser.profile_pic}
@@ -68,7 +67,7 @@ const AuthUserDropdown = () => {
                         </ListItemButton>
                     </List>
                 </nav>
-            </DdPopover>
+            </DpPopover>
         </ThemeProvider>
     );
 };

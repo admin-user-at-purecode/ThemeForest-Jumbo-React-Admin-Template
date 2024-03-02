@@ -1,11 +1,11 @@
-import React from 'react';
+import { useState,useMemo } from "react";
 import {ThemeSidebarContext} from "../../Context/context";
 import {createTheme} from "@mui/material/styles";
 
 const ThemeSidebar = ({children, init}) => {
-    const [sidebarTheme, setSidebarTheme] = React.useState(init);
+    const [sidebarTheme, setSidebarTheme] = useState(init);
 
-    const themeSidebarContextValue = React.useMemo(() => ({
+    const themeSidebarContextValue = useMemo(() => ({
         sidebarTheme: createTheme(sidebarTheme),
         setSidebarTheme: setSidebarTheme,
     }), [sidebarTheme, setSidebarTheme]);

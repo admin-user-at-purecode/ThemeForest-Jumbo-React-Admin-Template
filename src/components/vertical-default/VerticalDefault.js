@@ -1,4 +1,4 @@
-import React from "react";
+ "react";
 import Layout from "../Layout/Layout";
 import Header from "../Header";
 import Sidebar from "../Sidebar";

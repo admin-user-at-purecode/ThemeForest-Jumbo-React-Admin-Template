@@ -1,11 +1,11 @@
-import React from 'react';
+import { useState,useMemo } from "react";
 import {ThemeHeaderContext} from "../../Context/context";
 import {createTheme} from "@mui/material/styles";
 
 const ThemeHeader = ({children, init}) => {
-    const [headerTheme, setHeaderTheme] = React.useState(init);
+    const [headerTheme, setHeaderTheme] = useState(init);
 
-    const themeHeaderContextValue = React.useMemo(() => ({
+    const themeHeaderContextValue = useMemo(() => ({
         headerTheme: createTheme(headerTheme),
         setHeaderTheme: setHeaderTheme,
     }), [headerTheme, setHeaderTheme]);

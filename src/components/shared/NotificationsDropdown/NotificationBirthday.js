@@ -1,4 +1,4 @@
-import React from 'react';
+ 'react';
 import { notificationIcons } from './notificationIcons';
 import Avatar from "@mui/material/Avatar";
 import ListItemAvatar from "@mui/material/ListItemAvatar";

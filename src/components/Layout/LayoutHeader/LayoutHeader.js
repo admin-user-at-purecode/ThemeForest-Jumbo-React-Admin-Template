@@ -1,4 +1,4 @@
-import React from "react";
+import { useMemo } from "react";
 import { Toolbar } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
@@ -11,7 +11,7 @@ const LayoutHeader = ({ children }) => {
   const { headerOptions } = useLayoutHeader();
   const { headerTheme } = useHeaderTheme();
 
-  const headerMarginLeft = React.useMemo(() => {
+  const headerMarginLeft = useMemo(() => {
     if (!headerOptions.fixed) {
       return 0;
     }

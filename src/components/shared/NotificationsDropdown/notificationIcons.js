@@ -1,4 +1,4 @@
-import React from "react";
+ "react";
 import RateReviewOutlinedIcon from '@mui/icons-material/RateReviewOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import MarkEmailUnreadOutlinedIcon from '@mui/icons-material/MarkEmailUnreadOutlined';

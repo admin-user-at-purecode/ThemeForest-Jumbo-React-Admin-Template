@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { useMemo } from "react";
 import {CssBaseline} from "@mui/material";
 import { SIDEBAR_STYLES, SIDEBAR_VARIANTS, SIDEBAR_VIEWS} from '../../utils/constants/layout';
 import LayoutHeader from './LayoutHeader/LayoutHeader';
@@ -7,10 +6,11 @@ import LayoutSidebar from './LayoutSidebar/LayoutSidebar';
 import Div from '../shared/Div/Div';
 import {useLayoutSidebar} from '../../hooks/hooks';
 
+
 const Layout = (props) => {
     const {sidebarOptions} = useLayoutSidebar();
 
-    const contentMargin = React.useMemo(() => {
+    const contentMargin = useMemo(() => {
         if (sidebarOptions?.variant === SIDEBAR_VARIANTS.TEMPORARY) {
             return 0;
         } else if (sidebarOptions?.view === SIDEBAR_VIEWS.MINI) {
@@ -21,7 +21,7 @@ const Layout = (props) => {
         sidebarOptions?.open,
     ]);
 
-    const headerHeightProps = React.useMemo(() => {
+    const headerHeightProps = useMemo(() => {
         if (props?.headerSx?.height) {
             return {height: props?.headerSx?.height}
         }

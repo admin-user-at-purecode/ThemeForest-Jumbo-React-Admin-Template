@@ -1,10 +1,10 @@
-import React from 'react';
+import  { useState,useMemo } from 'react';
 import {AppContext} from '../../Context/context'
 
 const AppProvider = (props) => {
-    const [activeLayout, setActiveLayout] = React.useState(props.activeLayout);
+    const [activeLayout, setActiveLayout] = useState(props.activeLayout);
 
-    const appContextValue = React.useMemo(() => {
+    const appContextValue = useMemo(() => {
         return {
             activeLayout,
             setActiveLayout           

@@ -1,4 +1,4 @@
-import React from 'react';
+ 'react';
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Switch from "@mui/material/Switch";

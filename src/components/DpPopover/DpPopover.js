@@ -1,16 +1,17 @@
-import React from 'react';
+import { useState,useCallback } from "react";
+
 import Popover from "@mui/material/Popover";
 
-const DdPopover = ({triggerButton, children}) => {
+const DpPopover = ({triggerButton, children}) => {
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = useState(null);
     const isOpen = Boolean(anchorEl);
 
-    const handleClick = React.useCallback((event) => {
+    const handleClick = useCallback((event) => {
         setAnchorEl(event.currentTarget);
     }, []);
 
-    const handleClose = React.useCallback(() => {
+    const handleClose = useCallback(() => {
         setAnchorEl(null);
     }, []);
 
@@ -38,4 +39,4 @@ const DdPopover = ({triggerButton, children}) => {
     );
 };
 
-export default DdPopover;
+export default DpPopover;

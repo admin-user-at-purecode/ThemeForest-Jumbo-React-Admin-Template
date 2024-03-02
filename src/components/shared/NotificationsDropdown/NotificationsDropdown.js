@@ -1,4 +1,4 @@
-import React from 'react';
+ 'react';
 
 import NotificationImportantOutlinedIcon from '@mui/icons-material/NotificationImportantOutlined';
 import List from "@mui/material/List";
@@ -16,7 +16,7 @@ import NotificationSharedPost from './NotificationSharedPost';
 import NotificationPost from './NotificationPost';
 import { notifications } from '../../../mock_data/notifications';
 import CustomIconButton from '../../CustomIconButton/CustomIconButton';
-import DdPopover from '../../DdPopover/DdPopover';
+import DpPopover from '../../DpPopover/DpPopover';
 import Div from '../Div/Div';
 import {useHeaderTheme,useTheme} from '../../../hooks/hooks';
 
@@ -32,7 +32,7 @@ const NotificationsDropdown = () => {
     const {headerTheme} = useHeaderTheme();
     return (
         <ThemeProvider theme={theme}>
-            <DdPopover
+            <DpPopover
                 triggerButton={
                     <ThemeProvider theme={headerTheme}>
                         <CustomIconButton badge={{variant: "dot"}}   elevation={25}>
@@ -66,7 +66,7 @@ const NotificationsDropdown = () => {
                         </Button>
                     </CardActions>
                 </Div>
-            </DdPopover>
+            </DpPopover>
         </ThemeProvider>
     );
 };

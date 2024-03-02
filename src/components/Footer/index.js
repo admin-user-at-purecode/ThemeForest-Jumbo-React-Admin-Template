@@ -1,4 +1,4 @@
-import React from 'react';
+ 'react';
 import {Typography} from "@mui/material";
 import Button from "@mui/material/Button";
 import Div from '../shared/Div/Div';

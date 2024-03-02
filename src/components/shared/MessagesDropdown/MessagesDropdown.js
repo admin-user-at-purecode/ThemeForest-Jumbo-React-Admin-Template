@@ -11,7 +11,7 @@ import SettingHeader from './MessagesSetting/SettingHeader';
 import SettingsList from './MessagesSetting/SettingsList';
 import MessagesList from './MessagesList';
 import SearchMessages from './SearchMessages';
-import DdPopover from '../../DdPopover/DdPopover';
+import DpPopover from '../../DpPopover/DpPopover';
 import {useTheme} from '../../../hooks/hooks';
 
 const MessagesDropdown = () => {
@@ -24,7 +24,7 @@ const MessagesDropdown = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <DdPopover
+            <DpPopover
                 triggerButton={<MessagesTriggerButton/>}
                 disableInsideClick
             >
@@ -55,7 +55,7 @@ const MessagesDropdown = () => {
                             </CardActions>
                         </Div>
                 }
-            </DdPopover>
+            </DpPopover>
         </ThemeProvider>
     );
 };

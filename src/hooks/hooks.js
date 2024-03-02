@@ -1,4 +1,4 @@
-import React from "react";
+import { useContext } from "react";
 import {
   AppContext,
   ThemeHeaderContext,
@@ -9,11 +9,11 @@ import {
 } from "../Context/context";
 
 export const useApp = () => {
-  return React.useContext(AppContext);
+  return useContext(AppContext);
 };
 
 export const useHeaderTheme = () => {
-  return React.useContext(ThemeHeaderContext);
+  return useContext(ThemeHeaderContext);
 };
 
 export const useLayout = () => {
@@ -29,17 +29,17 @@ export const useLayout = () => {
 };
 
 export const useLayoutHeader = () => {
-  return React.useContext(LayoutHeaderContext);
+  return useContext(LayoutHeaderContext);
 };
 
 export const useLayoutSidebar = () => {
-  return React.useContext(LayoutSidebarContext);
+  return useContext(LayoutSidebarContext);
 };
 
 export const useSidebarTheme = () => {
-  return React.useContext(ThemeSidebarContext);
+  return useContext(ThemeSidebarContext);
 };
 
 export const useTheme = () => {
-  return React.useContext(ThemeContext);
+  return useContext(ThemeContext);
 };

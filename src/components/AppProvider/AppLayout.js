@@ -1,7 +1,8 @@
-import React from "react";
+import { useMemo } from "react";
 import LayoutProvider from "../Layout/LayoutProvider";
 import {useApp} from "../../hooks/hooks";
 import { LAYOUTS } from "../Layout/layouts";
+
 
 const AppLayout = (props) => {
   const { activeLayout } = useApp();
@@ -10,7 +11,7 @@ const AppLayout = (props) => {
     throw Error("AppLayout > No activeLayout is set.");
   }
 
-  const LayoutComponent = React.useMemo(() => {
+  const LayoutComponent = useMemo(() => {
     const layoutIndex = LAYOUTS.findIndex(
       (layout) => layout.name === activeLayout
     );

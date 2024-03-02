@@ -1,27 +1,30 @@
-import React from 'react';
+
+import { useCallback } from "react";
+
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import {Drawer, Toolbar} from "@mui/material";
 import Div from '../../shared/Div/Div';
 import { SIDEBAR_STYLES,SIDEBAR_VARIANTS, SIDEBAR_VIEWS} from '../../../utils/constants/layout';
 import {useSidebarTheme,useLayoutSidebar} from '../../../hooks/hooks';
 
+
 const LayoutSidebar = ({children, headerHeightProps}) => {
     const {sidebarTheme} = useSidebarTheme();
     const {sidebarOptions, setSidebarOptions} = useLayoutSidebar();
 
-    const handleClose = React.useCallback(() => {
+    const handleClose = useCallback(() => {
         setSidebarOptions({
             open: false,
         });
     }, []);
 
-    const handleMouseEnter = React.useCallback(() => {
+    const handleMouseEnter = useCallback(() => {
         if (sidebarOptions?.view === SIDEBAR_VIEWS.MINI) {
             setSidebarOptions({variant: SIDEBAR_VARIANTS.PERSISTENT, open: true});
         }
     }, [sidebarOptions?.view]);
 
-    const handleMouseLeave = React.useCallback(() => {
+    const handleMouseLeave = useCallback(() => {
         if (sidebarOptions?.view === SIDEBAR_VIEWS.MINI) {
             setSidebarOptions({variant: SIDEBAR_VARIANTS.PERMANENT, open: false});
         }

@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from "react";
 import ListSubheader from "@mui/material/ListSubheader";
 import NavIdentifier from './NavIdentifier';
 
@@ -37,4 +37,4 @@ const NavSection = ({item}) => {
     )
 };
 
-export default React.memo(NavSection);
+export default memo(NavSection);
