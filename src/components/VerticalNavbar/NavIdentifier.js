@@ -9,12 +9,12 @@ const NAV_VARIANTS = {
     'nav-item': NavItem
 };
 
-const NavIdentifier = ({item}) => {
+const NavIdentifier = ({item,isNested}) => {
     if(!item) return null;
 
     if(item.type && ['section', 'collapsible', 'nav-item'].includes(item.type)) {
         const NavComponent = NAV_VARIANTS[item.type];
-        return <NavComponent translate item={item} />
+        return <NavComponent translate item={item} isNested={isNested} />
     }
 };
 
