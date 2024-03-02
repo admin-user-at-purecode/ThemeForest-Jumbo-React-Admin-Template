@@ -23,72 +23,69 @@ const NavItem = (props) => {
 
   if (!item) return null;
 
-  return (
-    <ListItemButton
-      component={"li"}
-      sx={{
-        p: 0,
-        overflow: "hidden",
-        borderRadius: "0 24px 24px 0",
-        margin: "0",
-        ...{ "&::before": menuBefore },
-        "&:hover": {
-          color: (theme) => theme.palette.nav.action.hover,
-          backgroundColor: (theme) => theme.palette.nav.background.hover,
-          ...{
-            "&::before": {
-              ...menuBefore,
-              backgroundColor: (theme) => theme.palette.nav.tick.hover,
-            },
-          },
-        },
-        ...(false
-          ? {
-              color: (theme) => theme.palette.nav.action.active,
-              backgroundColor: (theme) => theme.palette.nav.background.active,
-              ...{
-                "&::before": {
-                  ...menuBefore,
-                  backgroundColor: (theme) => theme.palette.nav.tick.active,
-                },
-              },
-            }
-          : {}),
-      }}
-    >
-      <Link
-        underline={"none"}
-        to="#"
-        {...(item.target ? { target: item.target } : {})}
-        sx={{
-          flex: 1,
-          display: "flex",
-          alignItems: "center",
-          overflow: "hidden",
-          position: "relative",
-          color: "inherit",
-          p: (theme) => theme.spacing(1, 3.75),
-        }}
-      >
-        <ListItemIcon sx={{ minWidth: 32, color: "inherit" }}>
-          {isNested ? <CircleIcon sx={{ fontSize: 6, ml: 1 }} /> : item.icon}
-        </ListItemIcon>
-        {
-          <ListItemText
-            primary={label}
+    return (
+        <ListItemButton
+            component={"li"}
             sx={{
-              m: 0,
-              "& .MuiTypography-root": {
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-              },
+                p: 0,
+                overflow: 'hidden',
+                borderRadius:  '0 24px 24px 0',
+                margin: '0',
+                ...{'&::before': menuBefore} ,
+                '&:hover': {
+                    color: theme => theme.palette.nav.action.hover,
+                    backgroundColor: theme => theme.palette.nav.background.hover,
+                    ...{'&::before': {
+                            ...menuBefore,
+                            backgroundColor: theme => theme.palette.nav.tick.hover,
+                        }}
+                },
+                ...(false) ? {
+                    color: theme => theme.palette.nav.action.active,
+                    backgroundColor: theme => theme.palette.nav.background.active,
+                    ...{'&::before': {
+                        ...menuBefore,
+                            backgroundColor: theme => theme.palette.nav.tick.active,
+                    }},
+                } : {},
             }}
-          />
-        }
-      </Link>
-    </ListItemButton>
-  );
+        >
+            <Link underline={"none"} to="#" {...(item.target ? {target: item.target} : {})}
+                  sx={{
+                      flex: 1,
+                      display: "flex",
+                      alignItems: "center",
+                      overflow: "hidden",
+                      position: "relative",
+                      color: 'inherit',
+                      p: theme => theme.spacing(1, 3.75) ,
+                  }}
+            >
+
+                <ListItemIcon sx={{minWidth:  32, color: 'inherit'}}>
+                    {
+                        isNested ?
+                            <CircleIcon sx={{fontSize: 6, ml: 1}}/>
+                            :
+                            item.icon
+                    }
+                </ListItemIcon>
+                {
+                    <ListItemText
+                        primary={label}
+                        sx={{
+                            m: 0,
+                            '& .MuiTypography-root': {
+                                whiteSpace: 'nowrap',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                            }
+                        }}
+                    />
+                }
+            </Link>
+        </ListItemButton>
+    );
 };
 
 export default NavItem;
