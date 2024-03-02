@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { IconButton } from "@mui/material";
-import menus from "./menus";
+import menus from "../../mock_data/menus";
 import VerticalNavbar from "../VerticalNavbar/VerticalNavbar";
 import { DrawerHeader } from "../Layout/style";
 import Scrollbar from "../Scrollbar/Scrollbar";
