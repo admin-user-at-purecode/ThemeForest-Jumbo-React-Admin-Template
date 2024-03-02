@@ -5,7 +5,7 @@ import VerticalNavbar from "../VerticalNavbar/VerticalNavbar";
 import { DrawerHeader } from "../Layout/style";
 import Scrollbar from "../Scrollbar/Scrollbar";
 import { useLayoutSidebar, useSidebarTheme } from "../../hooks/hooks";
-import { SIDEBAR_VIEWS } from "../../utils/constants";
+import { SIDEBAR_VIEWS } from "../../utils/constants/layout";
 import Logo from "../Logo/Logo";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import Zoom from "@mui/material/Zoom";
@@ -31,22 +31,22 @@ const SidebarHeader = () => {
 
   return (
     <>
-        <DrawerHeader>
-          <Logo mini={isMiniAndClosed} mode={sidebarTheme.type} />
-          {sidebarOptions?.view !== SIDEBAR_VIEWS.MINI && (
-            <Zoom in={sidebarOptions?.open}>
-              <IconButton
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                sx={{ ml: 0, mr: -1.5 }}
-                onClick={() => setSidebarOptions({ open: false })}
-              >
-                <MenuOpenIcon />
-              </IconButton>
-            </Zoom>
-          )}
-        </DrawerHeader>
+      <DrawerHeader>
+        <Logo mini={isMiniAndClosed} mode={sidebarTheme.type} />
+        {sidebarOptions?.view !== SIDEBAR_VIEWS.MINI && (
+          <Zoom in={sidebarOptions?.open}>
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ ml: 0, mr: -1.5 }}
+              onClick={() => setSidebarOptions({ open: false })}
+            >
+              <MenuOpenIcon />
+            </IconButton>
+          </Zoom>
+        )}
+      </DrawerHeader>
     </>
   );
 };

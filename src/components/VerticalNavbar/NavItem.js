@@ -35,7 +35,7 @@ const NavItem = (props) => {
                 '&:hover': {
                     color: theme => theme.palette.nav.action.hover,
                     backgroundColor: theme => theme.palette.nav.background.hover,
-                    ... {'&::before': {
+                    ...{'&::before': {
                             ...menuBefore,
                             backgroundColor: theme => theme.palette.nav.tick.hover,
                         }}
