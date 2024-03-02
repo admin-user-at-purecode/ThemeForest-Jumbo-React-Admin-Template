@@ -1,7 +1,7 @@
 import React from 'react';
 import List from "@mui/material/List";
 import NavIdentifier from './NavIdentifier';
-import useLayoutSidebar from '../../hooks/useLayoutSidebar';
+import {useLayoutSidebar} from '../../hooks/hooks';
 import { SIDEBAR_VIEWS } from '../../utils/constants/layout';
 
 const VerticalNavbar = ({items}) => {

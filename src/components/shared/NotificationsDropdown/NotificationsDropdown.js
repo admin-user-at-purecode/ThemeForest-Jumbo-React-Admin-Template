@@ -18,8 +18,7 @@ import { notifications } from './fake-data';
 import CustomIconButton from '../../CustomIconButton/CustomIconButton';
 import DdPopover from '../../DdPopover/DdPopover';
 import Div from '../Div/Div';
-import useHeaderTheme from '../../../hooks/useHeaderTheme';
-import useTheme from '../../../hooks/useTheme';
+import {useHeaderTheme,useTheme} from '../../../hooks/hooks';
 
 const NotificationComponents = {
     "POSTING": NotificationPost,

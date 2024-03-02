@@ -1,4 +1,4 @@
-import profilePic from '../../../assets/images/60x60.png'
+import profilePic from '../../assets/images/60x60.png'
 
 export const authUser = {
     email: "harmaynicroft@example.com",

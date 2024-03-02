@@ -1,61 +1,6 @@
 import moment from 'moment';
 
-export const timeSince = (days) => {
-    let calcDate = new Date(Date.now() - (days * 24 * 3600 * 1000));
-    let seconds = Math.floor((new Date() - calcDate) / 1000);
 
-    let interval = seconds / 31536000;
-
-    if (interval > 1) {
-        return Math.floor(interval) + "y ago";
-    }
-    interval = seconds / 2592000;
-    if (interval > 1) {
-        return Math.floor(interval) + "m ago";
-    }
-    interval = seconds / 86400;
-    if (interval > 1) {
-        return Math.floor(interval) + "d ago";
-    }
-    interval = seconds / 3600;
-    if (interval > 1) {
-        return Math.floor(interval) + "h ago";
-    }
-    interval = seconds / 60;
-    if (interval > 1) {
-        return Math.floor(interval) + "m ago";
-    }
-    return Math.floor(seconds) + "s ago";
-};
-
-export const parseGradientArray = (gradientArray) => {
-    const gradients = [];
-    let percentageDefined = 0;
-    let undefinedGradientCounts = 0;
-
-    for (let count = 0; count < gradientArray.length; count++) {
-        const gradientValues = gradientArray[count].trim().split(" ");
-
-        if (gradientValues.length === 1) {
-            gradients.push({color: gradientValues[0], percent: -1});
-            undefinedGradientCounts++;
-        } else {
-            const percent = parseInt(gradientValues[gradientValues.length - 1].trim());
-            gradients.push({color: gradientValues[0], percent: percent});
-            percentageDefined += percent;
-        }
-    }
-
-    if (undefinedGradientCounts) {
-        const equalPercent = (100 - percentageDefined) / undefinedGradientCounts;
-        for (let count = 0; count < gradients.length; count++) {
-            if (gradients[count].percent === -1) {
-                gradients[count].percent = equalPercent;
-            }
-        }
-    }
-    return gradients;
-};
 
 export const getDateElements = date => {
     const dateString = moment(date).format('dddd, MMMM DD YYYY, hh:mm A');
@@ -101,10 +46,4 @@ export const getCustomDate = (value = 0, unit = 'days', format = 'hh:mm , DD MMM
         return moment().subtract(value, unit).format(format);
     }
 };
-export const getCustomTime = (value = 0, unit = 'minutes', format = 'hh:mm A') => {
-    if (value === 0) {
-        return moment().format(format);
-    } else {
-        return moment().subtract(value, unit).format(format);
-    }
-};
+

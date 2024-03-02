@@ -1,6 +1,6 @@
 import React from "react";
 import LayoutProvider from "../Layout/LayoutProvider";
-import useApp from "../../hooks/useApp";
+import {useApp} from "../../hooks/hooks";
 import { LAYOUTS } from "../Layout/layouts";
 
 const AppLayout = (props) => {

@@ -1,38 +1,63 @@
 {
-    "theme_augmentations": {
-      "color": "#7352C7",
-      "font": "Arial",
-      "size": "12px",
-      "background": "white",
-      "border": "1px solid black",
-      "radius": "5px",
-      "shadow": "2px 2px 2px 2px #888888"
-    },
-    "component_names": [
-        
-    ],
-    "component_information": {
-      "header": 1,
-      "sidebar": 1,
-      "BreadcrumbAdmin": {
-        "count": 1,
-        "location": "top of the page , below header",
-        "children": {
-          "heading": {
-            "count": 1,
-            "location": "left side of the BreadcrumbAdmin",
-            "description": "page heading"
-          },
-          "breadcrumb": {
-            "count": 1,
-            "location": "right side of the BreadcrumbAdmin",
-            "description": "a breadcrumb"
+  "theme_augmentations": {
+    "color": "#7352C7",
+    "font": "Arial",
+    "size": "12px",
+    "background": "white",
+    "border": "1px solid black",
+    "radius": "5px",
+    "shadow": "2px 2px 2px 2px #888888"
+  },
+
+  "component_names": ["Header", "Sidebar", "Footer"],
+
+  "component_information": {
+    "Header": {
+      "count": 1,
+      "location": "fixed on the top of the page",
+      "description": "header of the page containing quick buttons shortcuts",
+      "children": {
+        "IconButton": {
+          "count": 1,
+          "location": "left inside the header",
+          "description": "contains toggle button to toggle the sidebar"
+        },
+        "SearchGlobal": {
+          "count": 1,
+          "location": "to the right of the IconButton justified in right half",
+          "description": "container element holding searchIcon , search type Input and a cross icon",
+          "children": {
+            "SearchIcon": {
+              "count": 1,
+              "location": "to the left in the container",
+              "description": "simple search icon"
+            },
+            "StyledInputBase": {
+              "count": 1,
+              "location": "to the right of the SearchIcon",
+              "description": "input element where the user can search, which transists from the top of the screen in the mobile screen"
+            },
+            "CloseIcon": {
+              "count": 1,
+              "location": "to the right in the component and to the right of the StyledInputBase component",
+              "description": "cross icon that clears the text that user inputs in the input field"
+            }
           }
         },
-        "children_orientation_description": "heading is a text, breadcrumb is a breadcrumb --  all arranged in a flex format"
-      }
-    },
-    "functionality": {},
-    "sizing_updates": [],
-    "screen_and_layout_augmentations": []
-  }
+        "MessagesDropdown":{
+          "count":1,
+          "location":"to the right of the SearchGlobal component",
+          "description":"button element that opens a popup for the messages received",
+          "children":{
+            
+          }
+        }
+      },
+      "children_orientation_description": "flexed with aligned center"
+    }
+  },
+
+  "functionality": {},
+  "sizing_updates": [],
+  "screen_and_layout_augmentations": []
+}

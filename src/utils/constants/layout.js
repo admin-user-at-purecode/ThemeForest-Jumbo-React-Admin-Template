@@ -20,10 +20,7 @@ export const SIDEBAR_SCROLL_TYPES = {
 };
 
 export const SIDEBAR_ANCHOR_POSITIONS = {
-    LEFT: "left",
-    RIGHT: "right",
-    TOP: "top",
-    BOTTOM: "bottom",
+    LEFT: "left"
 };
 
 export const LAYOUT_ACTIONS = {

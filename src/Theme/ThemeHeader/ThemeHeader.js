@@ -1,5 +1,5 @@
 import React from 'react';
-import ThemeHeaderContext from "../../Context/ThemeHeaderContext";
+import {ThemeHeaderContext} from "../../Context/context";
 import {createTheme} from "@mui/material/styles";
 
 const ThemeHeader = ({children, init}) => {

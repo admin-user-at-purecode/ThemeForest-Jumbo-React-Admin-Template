@@ -1,5 +1,5 @@
 import React from 'react';
-import ThemeSidebarContext from "../../Context/ThemeSidebarContext";
+import {ThemeSidebarContext} from "../../Context/context";
 import {createTheme} from "@mui/material/styles";
 
 const ThemeSidebar = ({children, init}) => {

@@ -12,7 +12,7 @@ import SettingsList from './MessagesSetting/SettingsList';
 import MessagesList from './MessagesList';
 import SearchMessages from './SearchMessages';
 import DdPopover from '../../DdPopover/DdPopover';
-import useTheme from '../../../hooks/useTheme';
+import {useTheme} from '../../../hooks/hooks';
 
 const MessagesDropdown = () => {
     const [showSettings, setShowSettings] = useState(false);

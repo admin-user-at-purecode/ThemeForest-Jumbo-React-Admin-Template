@@ -1,5 +1,5 @@
 import React from 'react';
-import ThemeContext from '../Context/ThemeContext';
+import {ThemeContext} from '../Context/context';
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import ThemeHeader from './ThemeHeader/ThemeHeader';
 import ThemeSidebar from './ThemeSidebar/ThemeSidebar';
@@ -24,9 +24,9 @@ const AppTheme = ({children, init}) => {
             <ThemeProvider theme={themeContextValue.theme}>
                 <ThemeHeader init={init.header}>
                     <ThemeSidebar init={init.sidebar}>
-                        <ThemeFooter init={init.footer}>
+                        {/* <ThemeFooter init={init.footer}> */}
                             {children}
-                        </ThemeFooter>
+                        {/* </ThemeFooter> */}
                     </ThemeSidebar>
                 </ThemeHeader>
             </ThemeProvider>

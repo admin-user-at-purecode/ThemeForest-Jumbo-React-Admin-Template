@@ -2,7 +2,7 @@ import React from 'react';
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import {ThemeProvider} from "@mui/material";
 import IconButton from '../../CustomIconButton/CustomIconButton';
-import useHeaderTheme from '../../../hooks/useHeaderTheme';
+import {useHeaderTheme} from '../../../hooks/hooks';
 
 const MessagesTriggerButton = () => {
     const {headerTheme} = useHeaderTheme();

@@ -1,5 +1,5 @@
 import React from 'react';
-import ThemeFooterContext from "../../Context/ThemeFooterContext";
+import {ThemeFooterContext} from "../../Context/context";
 import {createTheme} from "@mui/material/styles";
 
 const ThemeFooter = ({children, init}) => {

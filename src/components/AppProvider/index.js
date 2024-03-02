@@ -1,5 +1,5 @@
 import React from 'react';
-import AppContext from '../../Context/AppContext'
+import {AppContext} from '../../Context/context'
 
 const AppProvider = (props) => {
     const [activeLayout, setActiveLayout] = React.useState(props.activeLayout);

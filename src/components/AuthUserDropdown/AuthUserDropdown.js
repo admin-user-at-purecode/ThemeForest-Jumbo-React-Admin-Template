@@ -10,9 +10,9 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import RepeatOutlinedIcon from '@mui/icons-material/RepeatOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
-import DdPopover from '../../DdPopover/DdPopover';
-import Div from '../Div/Div';
-import useTheme from '../../../hooks/useTheme';
+import DdPopover from '../DdPopover/DdPopover';
+import Div from '../shared/Div/Div';
+import {useTheme} from '../../hooks/hooks';
 
 const AuthUserDropdown = () => {
     const {theme} = useTheme();

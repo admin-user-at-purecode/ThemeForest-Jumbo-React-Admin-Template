@@ -3,8 +3,7 @@ import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import {Drawer, Toolbar} from "@mui/material";
 import Div from '../../shared/Div/Div';
 import { SIDEBAR_STYLES,SIDEBAR_VARIANTS, SIDEBAR_VIEWS} from '../../../utils/constants/layout';
-import useSidebarTheme from '../../../hooks/useSidebarTheme';
-import useLayoutSidebar from '../../../hooks/useLayoutSidebar';
+import {useSidebarTheme,useLayoutSidebar} from '../../../hooks/hooks';
 
 const LayoutSidebar = ({children, headerHeightProps}) => {
     const {sidebarTheme} = useSidebarTheme();

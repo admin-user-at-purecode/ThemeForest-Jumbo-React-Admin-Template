@@ -7,7 +7,7 @@ import List from "@mui/material/List";
 import {Popover} from "@mui/material";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import useLayoutSidebar from '../../hooks/useLayoutSidebar';
+import {useLayoutSidebar} from '../../hooks/hooks';
 import { SIDEBAR_VIEWS } from '../../utils/constants/layout';
 import { ArrowWrapper } from './style';
 import NavIdentifier from './NavIdentifier';

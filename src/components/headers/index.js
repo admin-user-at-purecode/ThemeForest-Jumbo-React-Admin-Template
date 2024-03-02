@@ -1,7 +1,7 @@
 import React from 'react';
 import Stack from "@mui/material/Stack";
-import useLayoutSidebar from '../../hooks/useLayoutSidebar';
-import AuthUserDropdown from '../shared/AuthUserDropdown/AuthUserDropdown';
+import {useLayoutSidebar,useHeaderTheme} from '../../hooks/hooks';
+import AuthUserDropdown from '../AuthUserDropdown/AuthUserDropdown';
 import NotificationsDropdown from '../shared/NotificationsDropdown/NotificationsDropdown';
 import MessagesDropdown from '../shared/MessagesDropdown/MessagesDropdown';
 import SearchGlobal from '../shared/SearchGlobal/SearchGlobal';
@@ -14,7 +14,6 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import CustomIconButton from '../CustomIconButton/CustomIconButton';
 import Logo from '../shared/Logo/Logo';
 import { SIDEBAR_STYLES ,SIDEBAR_VARIANTS} from '../../utils/constants/layout';
-import useHeaderTheme from '../../hooks/useHeaderTheme';
 
 const Header = () => {
     const {sidebarOptions, setSidebarOptions} = useLayoutSidebar();
@@ -42,7 +41,7 @@ const Header = () => {
                         onClick={() => setSidebarOptions({open: !sidebarOptions.open})}
                     >
                         {
-                            sidebarOptions?.open ? <MenuOpenIcon/> : <MenuIcon/>
+                            sidebarOptions?.open ? <MenuOpenIcon/> : <MenuIcon />
                         }
                     </IconButton>
             }

@@ -1,7 +1,7 @@
 import React from 'react';
 import ListSubheader from "@mui/material/ListSubheader";
 import NavIdentifier from './NavIdentifier';
-import useLayoutSidebar from '../../hooks/useLayoutSidebar';
+import {useLayoutSidebar} from '../../hooks/hooks';
 import { SIDEBAR_VIEWS } from '../../utils/constants/layout';
 
 const NavSection = ({item}) => {

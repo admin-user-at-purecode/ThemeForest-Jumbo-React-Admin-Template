@@ -2,9 +2,7 @@ import React from 'react';
 import {Toolbar} from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
-import useLayoutSidebar from '../../../hooks/useLayoutSidebar';
-import useLayoutHeader from '../../../hooks/useLayoutHeader';
-import useHeaderTheme from '../../../hooks/useHeaderTheme';
+import {useLayoutSidebar,useLayoutHeader,useHeaderTheme} from '../../../hooks/hooks';
 import { SIDEBAR_STYLES, SIDEBAR_VARIANTS, SIDEBAR_VIEWS}  from '../../../utils/constants/layout';
 
 const LayoutHeader = ({children, sx}) => {
@@ -46,8 +44,6 @@ const LayoutHeader = ({children, sx}) => {
         headerOptions?.fixed,
     ]);
 
-    if (headerOptions?.hide)
-        return null;
 
     return (
         <ThemeProvider theme={headerTheme}>

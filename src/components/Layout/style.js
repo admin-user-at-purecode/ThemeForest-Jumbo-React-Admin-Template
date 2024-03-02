@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@mui/material/styles/styled";
-import useLayoutSidebar from "../../hooks/useLayoutSidebar";
+import {useLayoutSidebar} from "../../hooks/hooks";
 import {SIDEBAR_VIEWS} from "../../utils/constants/layout";
 
 export const DrawerHeader = styled('div')(({theme}) => {

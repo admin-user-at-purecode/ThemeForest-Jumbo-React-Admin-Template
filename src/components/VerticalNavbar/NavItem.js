@@ -4,7 +4,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import {ListItemIcon} from "@mui/material";
 import ListItemText from "@mui/material/ListItemText";
 import CircleIcon from '@mui/icons-material/Circle';
-import useLayoutSidebar from '../../hooks/useLayoutSidebar';
+import {useLayoutSidebar} from '../../hooks/hooks';
 import { SIDEBAR_VIEWS } from '../../utils/constants/layout';
 
 const menuBefore = {

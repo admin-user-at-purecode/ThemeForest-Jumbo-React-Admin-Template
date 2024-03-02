@@ -1,21 +1,15 @@
 import React from 'react';
 
-import {CssBaseline, Toolbar} from "@mui/material";
-import useLayoutSidebar from '../../hooks/useLayoutSidebar';
+import {CssBaseline} from "@mui/material";
 import { SIDEBAR_STYLES, SIDEBAR_VARIANTS, SIDEBAR_VIEWS} from '../../utils/constants/layout';
 import LayoutHeader from './LayoutHeader/LayoutHeader';
-import LayoutFooter from './LayoutFooter/LayoutFooter';
 import LayoutSidebar from './LayoutSidebar/LayoutSidebar';
 import Div from '../shared/Div/Div';
-import useLayoutHeader from '../../hooks/useLayoutHeader';
-import useLayoutRoot from '../../hooks/useLayoutRoot';
-import useLayoutContent from '../../hooks/useLayoutContent';
+import {useLayoutSidebar,useLayoutRoot} from '../../hooks/hooks';
 
 const Layout = (props) => {
     const {sidebarOptions} = useLayoutSidebar();
-    const {headerOptions} = useLayoutHeader();
     const {rootOptions} = useLayoutRoot();
-    const {contentOptions} = useLayoutContent();
 
     const contentMargin = React.useMemo(() => {
         if (sidebarOptions?.variant === SIDEBAR_VARIANTS.TEMPORARY) {
@@ -93,10 +87,6 @@ const Layout = (props) => {
                             {props.header}
                         </LayoutHeader>
                     }
-                    {
-                        !headerOptions.hide && headerOptions.fixed &&
-                        <Toolbar sx={{...headerHeightProps}}/>
-                    }
                     <Div
                         sx={{
                             display: 'flex',
@@ -105,15 +95,14 @@ const Layout = (props) => {
                             flexDirection: 'column',
                             py: 4,
                             px: {lg: 6, xs: 4},
-                            ...(contentOptions?.sx ?? {})
                         }}
                         className="CmtLayout-content"
                     >
                         {props.children}
                     </Div>
-                    <LayoutFooter>
+                    <Div>
                         {props.footer}
-                    </LayoutFooter>
+                    </Div>
                 </Div>
             </Div>
         </Div>
