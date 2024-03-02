@@ -10,7 +10,7 @@ import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import RepeatOutlinedIcon from '@mui/icons-material/RepeatOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
 import DpPopover from '../DpPopover/DpPopover';
-import Div from '../shared/Div/Div';
+import Div from '../Div/Div';
 import {useTheme} from '../../hooks/hooks';
 
 const AuthUserDropdown = () => {

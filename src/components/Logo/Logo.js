@@ -1,7 +1,7 @@
  'react';
 import Div from '../Div/Div';
 import Link from "@mui/material/Link";
-import adminPic from '../../../assets/images/60x60.png'
+import adminPic from '../../assets/images/60x60.png'
 
 const Logo = ({sx}) => {
     return (

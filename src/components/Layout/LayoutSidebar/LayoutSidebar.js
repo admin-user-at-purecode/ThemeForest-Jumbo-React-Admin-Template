@@ -3,10 +3,9 @@ import { useCallback } from "react";
 
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import {Drawer, Toolbar} from "@mui/material";
-import Div from '../../shared/Div/Div';
+import Div from "../../Div/Div";
 import { SIDEBAR_STYLES,SIDEBAR_VARIANTS, SIDEBAR_VIEWS} from '../../../utils/constants/layout';
-import {useSidebarTheme,useLayoutSidebar} from '../../../hooks/hooks';
-
+import { useSidebarTheme,useLayoutSidebar } from "../../../hooks/hooks";
 
 const LayoutSidebar = ({children, headerHeightProps}) => {
     const {sidebarTheme} = useSidebarTheme();

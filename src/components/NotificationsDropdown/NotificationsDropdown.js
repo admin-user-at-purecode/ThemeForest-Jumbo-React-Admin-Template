@@ -14,11 +14,11 @@ import NotificationBirthday from './NotificationBirthday';
 import NotificationInvitation from './NotificationInvitation';
 import NotificationSharedPost from './NotificationSharedPost';
 import NotificationPost from './NotificationPost';
-import { notifications } from '../../../mock_data/notifications';
-import CustomIconButton from '../../CustomIconButton/CustomIconButton';
-import DpPopover from '../../DpPopover/DpPopover';
+import { notifications } from '../../mock_data/notifications';
+import CustomIconButton from '../CustomIconButton/CustomIconButton';
+import DpPopover from '../DpPopover/DpPopover';
 import Div from '../Div/Div';
-import {useHeaderTheme,useTheme} from '../../../hooks/hooks';
+import {useHeaderTheme,useTheme} from '../../hooks/hooks';
 
 const NotificationComponents = {
     "POSTING": NotificationPost,

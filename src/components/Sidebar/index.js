@@ -6,7 +6,7 @@ import { DrawerHeader } from "../Layout/style";
 import Scrollbar from "../Scrollbar/Scrollbar";
 import { useLayoutSidebar, useSidebarTheme } from "../../hooks/hooks";
 import { SIDEBAR_VIEWS } from "../../utils/constants";
-import Logo from "../shared/Logo/Logo";
+import Logo from "../Logo/Logo";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import Zoom from "@mui/material/Zoom";
 

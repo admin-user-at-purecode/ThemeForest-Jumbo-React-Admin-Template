@@ -6,14 +6,13 @@ import Div from '../Div/Div';
 import {CardActions, ThemeProvider} from "@mui/material";
 
 import MessagesTriggerButton from './MessagesTriggerButton';
-import MessagesHeader from './MessagesList/MessagesHeader';
-import SettingHeader from './MessagesSetting/SettingHeader';
-import SettingsList from './MessagesSetting/SettingsList';
-import MessagesList from './MessagesList';
-import SearchMessages from './SearchMessages';
-import DpPopover from '../../DpPopover/DpPopover';
-import {useTheme} from '../../../hooks/hooks';
-
+import MessagesHeader from '../MessagesList/MessagesHeader';
+import SettingHeader from '../MessagesSetting/SettingHeader';
+import SettingsList from '../MessagesSetting/SettingsList';
+import MessagesList from '../MessagesList';
+import { useTheme } from '../../hooks/hooks';
+import DpPopover from '../DpPopover/DpPopover';
+import SearchMessages from './SearchMessages'
 const MessagesDropdown = () => {
     const [showSettings, setShowSettings] = useState(false);
     const {theme} = useTheme();

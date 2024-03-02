@@ -1,7 +1,7 @@
  'react';
 import List from "@mui/material/List";
 import MessageItem from "./MessageItem";
-import messages from "../../../../mock_data/messages";
+import messages from "../../mock_data/messages";
 
 const MessagesList = () => {
     return (

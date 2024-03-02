@@ -1,21 +1,22 @@
  'react';
 import { notificationIcons } from './notificationIcons';
 import Avatar from "@mui/material/Avatar";
+import Link from "@mui/material/Link";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
-import {Link, Typography} from "@mui/material";
+import {Typography} from "@mui/material";
 import ListItemButton from "@mui/material/ListItemButton";
+import { getDateElements } from '../../utils/constants/formatHelpers';
 import Span from '../Span/Span';
-import { getDateElements } from '../../../utils/constants/formatHelpers';
 
-const NotificationBirthday = ({item}) => {
+const NotificationPost = ({item}) => {
     return (
         <ListItemButton component={"li"} alignItems={"flex-start"}>
             <ListItemAvatar>
                 <Avatar src={item.user.profile_pic}/>
             </ListItemAvatar>
             <ListItemText>
-                <Link underline={"none"} href="#/">{item.user.name}</Link> has birthday today.
+                <Link underline={"none"} href="#/">{item.user.name}</Link> has recently posted an album
                 <Typography component="span" sx={{
                     display: 'flex',
                     fontSize: '90%',
@@ -26,7 +27,7 @@ const NotificationBirthday = ({item}) => {
                 </Typography>
             </ListItemText>
         </ListItemButton>
-    )
+    );
 };
 
-export default NotificationBirthday;
+export default NotificationPost;

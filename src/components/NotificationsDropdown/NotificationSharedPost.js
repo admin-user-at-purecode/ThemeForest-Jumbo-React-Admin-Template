@@ -6,7 +6,7 @@ import Link from "@mui/material/Link";
 import {Typography} from "@mui/material";
 import ListItemButton from "@mui/material/ListItemButton";
 import { notificationIcons } from './notificationIcons';
-import { getDateElements } from '../../../utils/constants/formatHelpers';
+import { getDateElements } from '../../utils/constants/formatHelpers';
 import Span from '../Span/Span';
 
 

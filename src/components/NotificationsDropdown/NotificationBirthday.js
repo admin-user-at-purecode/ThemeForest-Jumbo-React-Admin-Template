@@ -1,21 +1,21 @@
  'react';
+import { notificationIcons } from './notificationIcons';
 import Avatar from "@mui/material/Avatar";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
 import {Link, Typography} from "@mui/material";
 import ListItemButton from "@mui/material/ListItemButton";
-import { getDateElements } from '../../../utils/constants/formatHelpers';
 import Span from '../Span/Span';
-import { notificationIcons } from './notificationIcons';
+import { getDateElements } from '../../utils/constants/formatHelpers';
 
-const NotificationInvitation = ({item}) => {
+const NotificationBirthday = ({item}) => {
     return (
         <ListItemButton component={"li"} alignItems={"flex-start"}>
             <ListItemAvatar>
                 <Avatar src={item.user.profile_pic}/>
             </ListItemAvatar>
             <ListItemText>
-                <Link underline={"none"} href="#/">{item.user.name}</Link> has sent you a group invitation for Global Health
+                <Link underline={"none"} href="#/">{item.user.name}</Link> has birthday today.
                 <Typography component="span" sx={{
                     display: 'flex',
                     fontSize: '90%',
@@ -26,7 +26,7 @@ const NotificationInvitation = ({item}) => {
                 </Typography>
             </ListItemText>
         </ListItemButton>
-    );
+    )
 };
 
-export default NotificationInvitation;
+export default NotificationBirthday;

@@ -1,6 +1,6 @@
  'react';
 import SearchIcon from "@mui/icons-material/Search";
-import { Search,SearchIconWrapper,StyledInputBase } from '../SearchGlobal/style';
+import { Search,SearchIconWrapper,StyledInputBase } from "../SearchGlobal/style";
 
 const SearchMessages = () => {
     return (
