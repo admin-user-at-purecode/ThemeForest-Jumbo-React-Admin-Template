@@ -45,3 +45,35 @@ export const getCustomDate = (value = 0, unit = 'days', format = 'hh:mm , DD MMM
     }
 };
 
+export const capitalizeFLetter = string => {
+    return string[0].toUpperCase() + string.slice(1);
+};
+
+
+export const timeSince = (days) => {
+    let calcDate = new Date(Date.now() - (days * 24 * 3600 * 1000));
+    let seconds = Math.floor((new Date() - calcDate) / 1000);
+
+    let interval = seconds / 31536000;
+
+    if (interval > 1) {
+        return Math.floor(interval) + "y ago";
+    }
+    interval = seconds / 2592000;
+    if (interval > 1) {
+        return Math.floor(interval) + "m ago";
+    }
+    interval = seconds / 86400;
+    if (interval > 1) {
+        return Math.floor(interval) + "d ago";
+    }
+    interval = seconds / 3600;
+    if (interval > 1) {
+        return Math.floor(interval) + "h ago";
+    }
+    interval = seconds / 60;
+    if (interval > 1) {
+        return Math.floor(interval) + "m ago";
+    }
+    return Math.floor(seconds) + "s ago";
+};

@@ -1,4 +1,4 @@
-import React from "react";
+import {useState} from 'react'
 import Stack from "@mui/material/Stack";
 import { useLayoutSidebar, useHeaderTheme } from "../../hooks/hooks";
 import AuthUserDropdown from "../AuthUserDropdown/AuthUserDropdown";
@@ -18,7 +18,7 @@ import { SIDEBAR_STYLES } from "../../utils/constants/layout";
 const Header = () => {
   const { sidebarOptions, setSidebarOptions } = useLayoutSidebar();
   const [dropdownSearchVisibility, setDropdownSearchVisibility] =
-    React.useState(false);
+    useState(false);
   const { headerTheme } = useHeaderTheme();
 
   const showDropdownSearch = useMediaQuery("(max-width:575px)");
