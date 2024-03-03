@@ -15,9 +15,7 @@ const Layout = (props) => {
     const contentMargin = useMemo(() => {
         if (sidebarOptions?.variant === SIDEBAR_VARIANTS.TEMPORARY) {
             return 0;
-        } else if (sidebarOptions?.view === SIDEBAR_VIEWS.MINI) {
-            return sidebarOptions?.minWidth;
-        }
+        } 
         return sidebarOptions?.open ? sidebarOptions?.width : 0;
     }, [
         sidebarOptions?.open,

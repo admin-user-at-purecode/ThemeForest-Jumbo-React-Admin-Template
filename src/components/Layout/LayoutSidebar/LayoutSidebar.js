@@ -10,7 +10,6 @@ import { useSidebarTheme,useLayoutSidebar } from "../../../hooks/hooks";
 const LayoutSidebar = ({children, headerHeightProps}) => {
     const {sidebarTheme} = useSidebarTheme();
     const {sidebarOptions, setSidebarOptions} = useLayoutSidebar();
-
     const handleClose = useCallback(() => {
         setSidebarOptions({
             open: false,
@@ -20,7 +19,6 @@ const LayoutSidebar = ({children, headerHeightProps}) => {
     if (sidebarOptions?.hide) {
         return null;
     }
-
     return (
         <ThemeProvider theme={sidebarTheme}>
             <Drawer
@@ -29,7 +27,7 @@ const LayoutSidebar = ({children, headerHeightProps}) => {
                         border: 'none',
                         boxShadow: 25,
                         transition: theme => theme.transitions.create(['width']),
-                        width: (sidebarOptions?.view === SIDEBAR_VIEWS.MINI && !sidebarOptions.open) ? sidebarOptions?.minWidth : sidebarOptions?.width,
+                        width: sidebarOptions?.width,
                         ...(sidebarTheme.bgImage ? {
                             background: `url(${sidebarTheme.bgImage}) no-repeat center`,
                             backgroundSize: 'cover',
@@ -38,12 +36,12 @@ const LayoutSidebar = ({children, headerHeightProps}) => {
                 }}
                 anchor={sidebarOptions?.anchor}
                 open={sidebarOptions?.open}
-                variant={(sidebarOptions?.view === SIDEBAR_VIEWS.MINI && sidebarOptions?.open) ? SIDEBAR_VARIANTS.TEMPORARY : sidebarOptions?.variant}
+                variant={sidebarOptions?.variant}
                 transitionDuration={300}
                 ModalProps={{
                     keepMounted: true,
                 }}
-                hideBackdrop={sidebarOptions?.view === SIDEBAR_VIEWS.MINI}
+                hideBackdrop={false}
                 onClose={handleClose}
             >
                 <Div

@@ -7,7 +7,6 @@ export const SIDEBAR_STYLES = {
 };
 
 export const SIDEBAR_VIEWS = {
-  MINI: "mini",
   FULL: "full",
 };
 
