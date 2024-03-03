@@ -1,12 +1,14 @@
-import AppLayout from "../../components/AppProvider/AppLayout";
-import MiscDashboard from "../misc/index";
+import Layout from "../../components/Layout/Layout"
+import LayoutProvider from "../../components/Layout/LayoutProvider"
 
-function Dashboard() {
-  return (
-    <AppLayout>
-      <MiscDashboard />
-    </AppLayout>
-  );
+function Dashboard(){
+return(
+    <LayoutProvider>
+      <Layout>
+        
+      </Layout>
+    </LayoutProvider>
+)
 }
 
 export default Dashboard;

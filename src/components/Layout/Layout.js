@@ -1,32 +1,26 @@
 import { useMemo } from "react";
 import {CssBaseline} from "@mui/material";
-import { SIDEBAR_STYLES, SIDEBAR_VARIANTS, SIDEBAR_VIEWS} from '../../utils/constants/layout';
+import { SIDEBAR_STYLES} from '../../utils/constants/layout';
 import LayoutHeader from './LayoutHeader/LayoutHeader';
 import LayoutSidebar from './LayoutSidebar/LayoutSidebar';
 import Div from "../Div/Div";
 import {useLayoutSidebar} from '../../hooks/hooks';
-
+import Header from "../Header";
+import Footer from "../Footer";
+import Sidebar from "../Sidebar";
 
 const Layout = (props) => {
     const {sidebarOptions} = useLayoutSidebar();
 
     const contentMargin = useMemo(() => {
-        if (sidebarOptions?.variant === SIDEBAR_VARIANTS.TEMPORARY) {
-            return 0;
-        } else if (sidebarOptions?.view === SIDEBAR_VIEWS.MINI) {
-            return sidebarOptions?.minWidth;
-        }
         return sidebarOptions?.open ? sidebarOptions?.width : 0;
     }, [
         sidebarOptions?.open,
     ]);
 
     const headerHeightProps = useMemo(() => {
-        if (props?.headerSx?.height) {
-            return {height: props?.headerSx?.height}
-        }
-        return {};
-    }, [props?.headerSx]);
+        return {height: 80}
+    }, []);
 
     return (
         <Div
@@ -42,8 +36,8 @@ const Layout = (props) => {
             <CssBaseline/>
             {
                 sidebarOptions?.style === SIDEBAR_STYLES.CLIPPED_UNDER_HEADER &&
-                <LayoutHeader sx={props.headerSx}>
-                    {props.header}
+                <LayoutHeader sx={{ height: 80}}>
+                    <Header/>
                 </LayoutHeader>
             }
 
@@ -57,7 +51,7 @@ const Layout = (props) => {
                 className="CmtLayout-wrapper"
             >
                 <LayoutSidebar headerHeightProps={headerHeightProps}>
-                    {props.sidebar}
+                <Sidebar/>
                 </LayoutSidebar>
                 <Div
                     sx={{
@@ -76,8 +70,8 @@ const Layout = (props) => {
 
                     {
                         sidebarOptions?.style !== SIDEBAR_STYLES.CLIPPED_UNDER_HEADER &&
-                        <LayoutHeader sx={props.headerSx}>
-                            {props.header}
+                        <LayoutHeader sx={{ height: 80}}>
+                           <Header/>
                         </LayoutHeader>
                     }
                     <Div
@@ -94,7 +88,7 @@ const Layout = (props) => {
                         {props.children}
                     </Div>
                     <Div>
-                        {props.footer}
+                    <Footer/>
                     </Div>
                 </Div>
             </Div>

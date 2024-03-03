@@ -1,4 +1,4 @@
-import { DENSITIES, LAYOUT_CONTAINER_STYLES, POSITION_TYPES}  from "../utils/constants/layout";
+import { DENSITIES, POSITION_TYPES}  from "../utils/constants/layout";
 
 const config = {
     defaultContentLayout: {
@@ -6,7 +6,7 @@ const config = {
             density: DENSITIES.STANDARD,
         },
         root: {
-            container: LAYOUT_CONTAINER_STYLES.FLUID,
+            container: "fluid",
             sx: {},
         },
         wrapper: {
