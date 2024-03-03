@@ -1,4 +1,5 @@
 import { getCustomDateTime } from "../utils/constants/formatHelpers";
+import Image from '../assets/images/150x150.png'
 
 export const notifications = [
     {
@@ -6,7 +7,7 @@ export const notifications = [
         user: {
             id: 101,
             name: 'Stella Johnson',
-            profile_pic: 'https://via.placeholder.com/150x150',
+            profile_pic: Image,
         },
         type: 'POSTING',
         metaData: {
@@ -16,7 +17,7 @@ export const notifications = [
                 owner: {
                     id: 545,
                     name: 'Martin Guptil',
-                    profile_pic: 'https://via.placeholder.com/150x150',
+                    profile_pic: Image,
                 },
             },
         },
@@ -27,7 +28,7 @@ export const notifications = [
         user: {
             id: 102,
             name: 'John Doe',
-            profile_pic: 'https://via.placeholder.com/150x150',
+            profile_pic: Image,
         },
         type: 'SHARED_POST',
         metaData: {
@@ -36,7 +37,7 @@ export const notifications = [
                 owner: {
                     id: 545,
                     name: 'Martin Guptil',
-                    profile_pic: 'https://via.placeholder.com/150x150',
+                    profile_pic: Image,
                 },
             },
         },
@@ -47,14 +48,14 @@ export const notifications = [
         user: {
             id: 100,
             name: 'Garry Sobars',
-            profile_pic: 'https://via.placeholder.com/150x150',
+            profile_pic: Image,
         },
         type: 'INVITATION',
         metaData: {
             user: {
                 id: 105,
                 name: 'North Taylor',
-                profile_pic: 'https://via.placeholder.com/150x150',
+                profile_pic: Image,
             },
             group: { id: 12, name: 'Global Health' },
         },
@@ -65,7 +66,7 @@ export const notifications = [
         user: {
             id: 105,
             name: 'Sara John',
-            profile_pic: 'https://via.placeholder.com/150x150',
+            profile_pic: Image,
         },
         type: 'BIRTHDAY',
         createdAt: getCustomDateTime(-150, 'minutes', 'MMMM DD, YYYY, h:mm:ss a'),
