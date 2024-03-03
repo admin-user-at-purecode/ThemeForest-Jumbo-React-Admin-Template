@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import {Drawer, Toolbar} from "@mui/material";
 import Div from "../../Div/Div";
-import { SIDEBAR_STYLES,SIDEBAR_VARIANTS, SIDEBAR_VIEWS} from '../../../utils/constants/layout';
+import { SIDEBAR_STYLES} from '../../../utils/constants/layout';
 import { useSidebarTheme,useLayoutSidebar } from "../../../hooks/hooks";
 
 const LayoutSidebar = ({children, headerHeightProps}) => {
