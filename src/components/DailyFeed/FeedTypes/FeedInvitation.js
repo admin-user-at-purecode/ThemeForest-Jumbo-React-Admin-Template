@@ -35,5 +35,5 @@ const FeedInvitation = ({feed}) => {
         </ListItem>
     );
 };
-/* Todo feed prop define */
+
 export default FeedInvitation;

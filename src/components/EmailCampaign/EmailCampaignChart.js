@@ -52,5 +52,5 @@ const EmailCampaignChart = ({color, shadowColor}) => {
         </ResponsiveContainer>
     );
 };
-/* Todo color, shadowColor prop define */
+
 export default EmailCampaignChart;

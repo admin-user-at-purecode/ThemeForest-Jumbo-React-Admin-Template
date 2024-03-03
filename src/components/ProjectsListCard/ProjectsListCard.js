@@ -21,5 +21,5 @@ const ProjectsListCard = ({scrollHeight}) => {
         </CardQuick>
     );
 };
-/* Todo scrollHeight prop define */
+
 export default ProjectsListCard;

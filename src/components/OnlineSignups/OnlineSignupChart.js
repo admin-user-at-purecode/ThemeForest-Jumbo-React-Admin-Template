@@ -50,5 +50,5 @@ const OnlineSignupChart = ({ color, shadowColor }) => {
     </ResponsiveContainer>
   );
 };
-/* Todo color, shadowColor prop define */
+
 export default OnlineSignupChart;

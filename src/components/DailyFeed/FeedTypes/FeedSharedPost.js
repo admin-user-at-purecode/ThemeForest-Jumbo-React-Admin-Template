@@ -41,5 +41,5 @@ const FeedSharedPost = ({feed}) => {
         </ListItem>
     );
 };
-/* Todo feed prop define */
+
 export default FeedSharedPost;

@@ -74,5 +74,5 @@ const ChartSalesOverview = ({data}) => {
         </ResponsiveContainer>
     );
 };
-/* Todo data prop define */
+
 export default ChartSalesOverview;
