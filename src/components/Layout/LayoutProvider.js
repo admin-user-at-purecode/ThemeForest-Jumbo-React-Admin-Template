@@ -1,4 +1,4 @@
-import { useReducer,useEffect,useCallback,useMemo } from "react";
+import { useReducer, useEffect, useCallback, useMemo } from "react";
 import {
   LayoutSidebarContext,
   LayoutHeaderContext,
@@ -100,11 +100,7 @@ const LayoutReducer = (state, action) => {
 };
 
 const LayoutProvider = ({ children }) => {
-  const [layoutOptions, setLayoutOptions] = useReducer(
-    LayoutReducer,
-    {},
-    init
-  );
+  const [layoutOptions, setLayoutOptions] = useReducer(LayoutReducer, {}, init);
 
   const isNotMobile = useMediaQuery("(min-width:1200px)");
 

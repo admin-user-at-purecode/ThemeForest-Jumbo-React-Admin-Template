@@ -1,10 +1,11 @@
-import AppLayout from "../../components/AppProvider/AppLayout"
+import Layout from "../../components/Layout/Layout"
+import LayoutProvider from "../../components/Layout/LayoutProvider"
 
 function Dashboard(){
 return(
-    <AppLayout>
-        
-    </AppLayout>
+    <LayoutProvider>
+      <Layout/>
+    </LayoutProvider>
 )
 }
 

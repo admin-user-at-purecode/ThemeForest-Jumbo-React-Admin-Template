@@ -1,4 +1,4 @@
-export const createTheme = (mainTheme, headerTheme, sidebarTheme, footerTheme) => {
+export const createTheme = (mainTheme, headerTheme, sidebarTheme) => {
     return {
         main: mainTheme,
         header: {
@@ -9,9 +9,5 @@ export const createTheme = (mainTheme, headerTheme, sidebarTheme, footerTheme) =
             ...mainTheme,
             ...(sidebarTheme ?? {})
         },
-        footer: {
-            ...mainTheme,
-            ...(footerTheme ?? {})
-        }
     }
 };

@@ -36,11 +36,6 @@ export const DENSITIES = {
     COMFORTABLE: "comfortable"
 };
 
-export const LAYOUT_CONTAINER_STYLES = {
-    FLUID: "fluid",
-    BOXED: "boxed",
-};
-
 export const POSITION_TYPES = {
     DEFAULT: "default",
 };

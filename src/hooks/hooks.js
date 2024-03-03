@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import {
-  AppContext,
   ThemeHeaderContext,
   LayoutHeaderContext,
   LayoutSidebarContext,
@@ -8,9 +7,6 @@ import {
   ThemeContext,
 } from "../Context/context";
 
-export const useApp = () => {
-  return useContext(AppContext);
-};
 
 export const useHeaderTheme = () => {
   return useContext(ThemeHeaderContext);
