@@ -1,9 +1,7 @@
 import VerticalDefault from "../../components/vertical-default/VerticalDefault";
-import SoloPage from "../../solo-page/SoloPage";
 
 const LAYOUT_NAMES = {
     VERTICAL_DEFAULT: "vertical-default",
-    SOLO_PAGE: "solo-page",
 };
 
 const LAYOUTS = [
@@ -11,11 +9,6 @@ const LAYOUTS = [
         name: LAYOUT_NAMES.VERTICAL_DEFAULT,
         label: "Vertical Default",
         component: VerticalDefault,
-    },
-    {
-        name: LAYOUT_NAMES.SOLO_PAGE,
-        label: "Solo Page",
-        component: SoloPage
     }
 ];
 

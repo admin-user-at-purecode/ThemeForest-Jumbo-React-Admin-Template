@@ -33,7 +33,7 @@ const SidebarHeader = () => {
     <>
       <DrawerHeader>
         <Logo mini={isMiniAndClosed} mode={sidebarTheme.type} />
-        {sidebarOptions?.view !== SIDEBAR_VIEWS.MINI && (
+        {/* {sidebarOptions?.view !== SIDEBAR_VIEWS.MINI && ( */}
           <Zoom in={sidebarOptions?.open}>
             <IconButton
               edge="start"
@@ -45,7 +45,7 @@ const SidebarHeader = () => {
               <MenuOpenIcon />
             </IconButton>
           </Zoom>
-        )}
+        {/* )} */}
       </DrawerHeader>
     </>
   );
