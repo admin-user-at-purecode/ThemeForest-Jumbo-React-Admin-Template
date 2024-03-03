@@ -76,7 +76,7 @@ const LatestAlerts = ({scrollHeight}) => {
             </TabContext>
             <Divider/>
             <CardActions sx={{py: theme => theme.spacing(1.5)}}>
-                <Link href={"#/"} underline={"none"} lineHeight={1.2}>Learn More</Link>
+                <Link href="#" underline={"none"} lineHeight={1.2}>Learn More</Link>
             </CardActions>
         </CardQuick>
     );

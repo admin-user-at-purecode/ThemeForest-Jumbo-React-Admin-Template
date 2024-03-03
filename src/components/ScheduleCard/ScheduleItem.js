@@ -44,5 +44,4 @@ const ScheduleItem = ({item}) => {
     )
 };
 
-/* Todo item prop define */
 export default ScheduleItem;

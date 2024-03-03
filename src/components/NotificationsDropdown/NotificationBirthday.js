@@ -15,7 +15,7 @@ const NotificationBirthday = ({item}) => {
                 <Avatar src={item.user.profile_pic}/>
             </ListItemAvatar>
             <ListItemText>
-                <Link underline={"none"} href="#/">{item.user.name}</Link> has birthday today.
+                <Link underline={"none"} href="#">{item.user.name}</Link> has birthday today.
                 <Typography component="span" sx={{
                     display: 'flex',
                     fontSize: '90%',
