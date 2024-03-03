@@ -13,9 +13,6 @@ const Layout = (props) => {
     const {sidebarOptions} = useLayoutSidebar();
 
     const contentMargin = useMemo(() => {
-        // if (sidebarOptions?.variant === SIDEBAR_VARIANTS.TEMPORARY) {
-        //     return 0;
-        // } 
         return sidebarOptions?.open ? sidebarOptions?.width : 0;
     }, [
         sidebarOptions?.open,
