@@ -17,19 +17,6 @@ const LayoutSidebar = ({children, headerHeightProps}) => {
         });
     }, []);
 
-    const handleMouseEnter = useCallback(() => {
-        if (sidebarOptions?.view === SIDEBAR_VIEWS.MINI) {
-            setSidebarOptions({variant: SIDEBAR_VARIANTS.PERSISTENT, open: true});
-        }
-    }, [sidebarOptions?.view]);
-
-    const handleMouseLeave = useCallback(() => {
-        if (sidebarOptions?.view === SIDEBAR_VIEWS.MINI) {
-            setSidebarOptions({variant: SIDEBAR_VARIANTS.PERMANENT, open: false});
-        }
-    }, [sidebarOptions?.view]);
-
-
     if (sidebarOptions?.hide) {
         return null;
     }
@@ -70,8 +57,6 @@ const LayoutSidebar = ({children, headerHeightProps}) => {
                         position: 'relative',
                         zIndex: 1,
                     }}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
                 >
                     {
                         sidebarOptions?.style === SIDEBAR_STYLES.CLIPPED_UNDER_HEADER &&

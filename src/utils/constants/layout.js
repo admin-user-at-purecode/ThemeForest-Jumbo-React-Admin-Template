@@ -1,42 +1,32 @@
 export const SIDEBAR_VARIANTS = {
-    PERSISTENT: "persistent",
-    TEMPORARY: "temporary",
-    PERMANENT: "permanent"
+  PERSISTENT: "persistent",
 };
 
 export const SIDEBAR_STYLES = {
-    FULL_HEIGHT: "full-height",
+  FULL_HEIGHT: "full-height",
 };
 
 export const SIDEBAR_VIEWS = {
-MINI: "mini",
-    FULL: "full",
+  MINI: "mini",
+  FULL: "full",
 };
 
 export const SIDEBAR_SCROLL_TYPES = {
-    DEFAULT: "default",
+  DEFAULT: "default",
 };
 
 export const SIDEBAR_ANCHOR_POSITIONS = {
-    LEFT: "left"
+  LEFT: "left",
 };
 
 export const LAYOUT_ACTIONS = {
-    SET_SIDEBAR_OPTIONS: "set-sidebar-options",
-    SET_HEADER_OPTIONS: "set-header-options",
-    SET_FOOTER_OPTIONS: "set-footer-options",
-    SET_OPTIONS: "set-options",
-    SET_ROOT_OPTIONS: "set-root-options",
-    SET_CONTENT_OPTIONS: "set-content-options"
+  SET_SIDEBAR_OPTIONS: "set-sidebar-options",
 };
 
 export const DENSITIES = {
-    STANDARD: "standard",
-    COMPACT: "compact",
-    COMFORTABLE: "comfortable"
+  STANDARD: "standard",
 };
 
 export const POSITION_TYPES = {
-    DEFAULT: "default",
+  DEFAULT: "default",
 };
-
