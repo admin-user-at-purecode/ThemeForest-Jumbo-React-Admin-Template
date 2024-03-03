@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import {CssBaseline} from "@mui/material";
-import { SIDEBAR_STYLES, SIDEBAR_VARIANTS, SIDEBAR_VIEWS} from '../../utils/constants/layout';
+import { SIDEBAR_STYLES} from '../../utils/constants/layout';
 import LayoutHeader from './LayoutHeader/LayoutHeader';
 import LayoutSidebar from './LayoutSidebar/LayoutSidebar';
 import Div from "../Div/Div";

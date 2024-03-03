@@ -4,7 +4,9 @@ import LayoutProvider from "../../components/Layout/LayoutProvider"
 function Dashboard(){
 return(
     <LayoutProvider>
-      <Layout/>
+      <Layout>
+        
+      </Layout>
     </LayoutProvider>
 )
 }

@@ -18,13 +18,6 @@ export const getDateElements = date => {
     };
 };
 
-/**
- * Get Custom Date Time
- * @param value
- * @param unit
- * @param format
- * @returns {string}
- */
 export const getCustomDateTime = (value = 0, unit = 'days', format = 'HH:mm a | MMMM DD, YYYY') => {
     if (value === 0) {
         return moment().format(format);
