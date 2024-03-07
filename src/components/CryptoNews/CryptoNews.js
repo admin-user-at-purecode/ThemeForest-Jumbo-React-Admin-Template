@@ -50,10 +50,7 @@ const CryptoNews = () => {
             <Chip size={"small"} label={"20"} color="primary" />
           </Typography>
 
-          <RqTabs
-            data={cryptoNewsCategoriesMockData}
-            sx={{ m: { md: "0 auto" } }}
-          />
+          <RqTabs data={cryptoNewsCategoriesMockData} sx={{ m: { md: "0" } }} />
         </Typography>
       }
       action={
