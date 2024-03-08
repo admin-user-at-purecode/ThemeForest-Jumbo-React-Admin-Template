@@ -10,31 +10,29 @@ import DdMenu from "../DdMenu/DdMenu";
 import { cardTitles } from "../../mock_data/cardTitles";
 
 // to be removed
-import baseAxios from "axios";
+// import baseAxios from "axios";
 
-const axios = baseAxios.create({
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-const taskService = {};
+// const axios = baseAxios.create({
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// });
+// const taskService = {};
 
-taskService.getTasks = async ({ queryKey }) => {
-  const { queryParams } = queryKey[queryKey.length - 1];
-  const { data } = await axios.get("/tasks", {
-    params: {
-      ...queryParams,
-    },
-  });
-  return data;
-};
+// taskService.getTasks = async ({ queryKey }) => {
+//   const { queryParams } = queryKey[queryKey.length - 1];
+//   const { data } = await axios.get("/tasks", {
+//     params: {
+//       ...queryParams,
+//     },
+//   });
+//   return data;
+// };
 
-taskService.getTaskCategories = async () => {
-  const { data } = await axios.get("/tasks/categories");
-  return data;
-};
-
-export { taskService };
+// taskService.getTaskCategories = async () => {
+//   const { data } = await axios.get("/tasks/categories");
+//   return data;
+// };
 
 const TasksList2 = ({ scrollHeight }) => {
   const renderTasksItem = useCallback((taskItem) => {
