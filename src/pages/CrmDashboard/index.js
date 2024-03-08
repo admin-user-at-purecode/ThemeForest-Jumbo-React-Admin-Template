@@ -1,14 +1,14 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import CurrencyCalculator from "../../components/CurrencyCalculator";
+import CurrencyCalculator from "../../components/CurrencyCalculator/CurrencyCalculator";
 import WelcomeSummary from "../../components/WelcomSummary";
 import RevenueHistory from "../../components/RevenueHistory";
 import NewCustomers from "../../components/NewCustomers/NewCustomers";
-import Growth from "../../components/Growth";
+import Growth from "../../components/Growth/Growth";
 import ProjectCounterCard from "../../components/ProjectCounterCard";
 import TasksCounterCard from "../../components/TasksCounterCard";
 import TeamsCounterCard from "../../components/TeamsCounterCard";
-import FilesCounterCard from "../../components/FilesCounterCard";
+import FilesCounterCard from "../../components/FilesCounterCard/FilesCounterCard";
 import TasksList2 from "../../components/TasksList2/TasksList2";
 import RecentTickets from "../../components/RecentTickets/RecentTickets";
 import TicketsStatus from "../../components/TicketsStatus/TicketsStatus";

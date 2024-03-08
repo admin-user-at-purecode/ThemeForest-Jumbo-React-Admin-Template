@@ -1,5 +1,5 @@
 import React from 'react';
-import {customers} from "./data";
+import { customers } from '../../mock_data/customers';
 import {Avatar, AvatarGroup} from "@mui/material";
 
 const Customer = () => {
