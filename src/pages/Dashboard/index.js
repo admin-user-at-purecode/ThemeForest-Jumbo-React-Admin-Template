@@ -1,6 +1,6 @@
 import Layout from "../../components/Layout/Layout"
 import LayoutProvider from "../../components/Layout/LayoutProvider"
-import ListingDashboard from "../ListingDashboard/ListingDashboard"
+import ListingDashboard from "../ListingDashboard"
 
 function Dashboard(){
 return(
