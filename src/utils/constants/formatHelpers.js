@@ -38,3 +38,6 @@ export const getCustomDate = (value = 0, unit = 'days', format = 'hh:mm , DD MMM
     }
 };
 
+export const capitalizeFLetter = string => {
+    return string[0].toUpperCase() + string.slice(1);
+};
