@@ -1,6 +1,6 @@
 import { timeSince } from "@/utils";
-import { ASSET_AVATARS, ASSET_IMAGES } from "../../../utils/constants/paths";
-import { getAssetPath } from "../../../utils/appHelpers";
+import Image from "../assets/images/52x52.png";
+import Image2 from "../assets/images/44x44.png";
 
 export const dailyFeed = [
   {
@@ -8,14 +8,14 @@ export const dailyFeed = [
     user: {
       id: 100,
       name: "Robin Smith",
-      profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar4.jpg`, "52x52"),
+      profile_pic: Image,
     },
     type: "PROJECT_INVITATION",
     metaData: {
       sender: {
         id: 123,
         name: "Amily Johnson",
-        profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar11.jpg`, "52x52"),
+        profile_pic: Image,
       },
       project: { id: 12, name: "Mouldify" },
     },
@@ -29,64 +29,46 @@ export const dailyFeed = [
     user: {
       id: 101,
       name: "Stella Johnson",
-      profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar5.jpg`, "52x52"),
+      profile_pic: Image,
     },
     type: "PHOTOS_UPLOADED",
     metaData: {
       user: {
         id: 1234,
         name: "Garry Sobars",
-        profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar12.jpg`, "52x52"),
+        profile_pic: Image,
       },
       group: "Art Lovers",
       count: 6,
       photos: [
         {
           id: 1,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/speaker.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Beauty with Beast",
         },
         {
           id: 2,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/laptop.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Nature Love",
         },
         {
           id: 3,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/trimmer.jpg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Forest",
         },
         {
           id: 4,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/travel-bag.jpg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Nature at its best",
         },
         {
           id: 5,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/microphone.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Sea House",
         },
         {
           id: 6,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/speaker.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Minimal",
         },
       ],
@@ -101,14 +83,14 @@ export const dailyFeed = [
     user: {
       id: 102,
       name: "John Doe",
-      profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar6.jpg`, "52x52"),
+      profile_pic: Image,
     },
     type: "SHARED_POST",
     metaData: {
       user: {
         id: 124,
         name: "Jacky Roy",
-        profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar12.jpg`, "52x52"),
+        profile_pic: Image,
       },
       post: { title: "This is Beginning" },
     },
@@ -122,16 +104,16 @@ export const dailyFeed = [
     user: {
       id: 105,
       name: "North Taylor",
-      profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar8.jpg`, "52x52"),
+      profile_pic: Image,
     },
     type: "PROJECT_INVITATION",
     metaData: {
       sender: {
         id: 130,
         name: "Joe Root",
-        profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar9.jpg`, "52x52"),
+        profile_pic: Image,
       },
-      project: { id: 13, name: "" },
+      project: { id: 13, name: "Jumbo" },
     },
     likes: 234,
     shares: 86,
@@ -143,77 +125,56 @@ export const dailyFeed = [
     user: {
       id: 756,
       name: "Peter Broad",
-      profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar4.jpg`, "52x52"),
+      profile_pic: Image,
     },
     type: "PHOTOS_UPLOADED",
     metaData: {
       user: {
         id: 1234,
         name: "James Anderson",
-        profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar12.jpg`, "52x52"),
+        profile_pic: Image,
       },
       count: 8,
       group: "Javascript Experts",
       photos: [
         {
           id: 1,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/speaker.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Beauty with Beast",
         },
         {
           id: 2,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/laptop.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Nature Love",
         },
         {
           id: 3,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/trimmer.jpg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Forest",
         },
         {
           id: 4,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/travel-bag.jpg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Nature at its best",
         },
         {
           id: 5,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/microphone.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Sea House",
         },
         {
           id: 6,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/speaker.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Minimal",
         },
         {
           id: 7,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/wach.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Beauty with Beast",
         },
         {
           id: 8,
-          photo_url: getAssetPath(`${ASSET_IMAGES}/products/led.jpeg`, "44x44"),
+          photo_url: Image2,
           caption: "Nature Love",
         },
       ],
@@ -228,14 +189,14 @@ export const dailyFeed = [
     user: {
       id: 455,
       name: "Rose Taylor",
-      profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar7.jpg`, "52x52"),
+      profile_pic: Image,
     },
     type: "SHARED_POST",
     metaData: {
       user: {
         id: 765,
         name: "Robert Twose",
-        profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar8.jpg`, "52x52"),
+        profile_pic: Image,
       },
       post: { title: "Introduction to Javascript" },
     },
@@ -249,14 +210,14 @@ export const dailyFeed = [
     user: {
       id: 676,
       name: "Williams Blake",
-      profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar10.jpg`, "52x52"),
+      profile_pic: Image,
     },
     type: "PROJECT_INVITATION",
     metaData: {
       sender: {
         id: 544,
         name: "Janifer decibel",
-        profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar14.jpg`, "52x52"),
+        profile_pic: Image,
       },
       project: { id: 16, name: "Wieldy" },
     },
@@ -270,40 +231,31 @@ export const dailyFeed = [
     user: {
       id: 906,
       name: "Steve Law",
-      profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar5.jpg`, "52x52"),
+      profile_pic: Image,
     },
     type: "PHOTOS_UPLOADED",
     metaData: {
       user: {
         id: 786,
         name: "Dhruva Sharma",
-        profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar6.jpg`, "52x52"),
+        profile_pic: Image,
       },
       count: 3,
       group: "React Lovers",
       photos: [
         {
           id: 1,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/speaker.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Beauty with Beast",
         },
         {
           id: 2,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/laptop.jpeg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Nature Love",
         },
         {
           id: 3,
-          photo_url: getAssetPath(
-            `${ASSET_IMAGES}/products/trimmer.jpg`,
-            "44x44"
-          ),
+          photo_url: Image2,
           caption: "Forest",
         },
       ],
@@ -318,14 +270,14 @@ export const dailyFeed = [
     user: {
       id: 678,
       name: "Brett Heavy",
-      profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar7.jpg`, "52x52"),
+      profile_pic: Image,
     },
     type: "SHARED_POST",
     metaData: {
       user: {
         id: 657,
         name: "Ian hughes",
-        profile_pic: getAssetPath(`${ASSET_AVATARS}/avatar8.jpg`, "52x52"),
+        profile_pic: Image,
       },
       post: { title: "A road to good development" },
     },
