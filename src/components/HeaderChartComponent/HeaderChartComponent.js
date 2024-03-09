@@ -16,10 +16,10 @@ const HeaderChartComponent = () => {
       }
       action={
         <Breadcrumbs aria-label="breadcrumb" color={"common.white"}>
-          <Link underline="hover" color="inherit" href="/">
+          <Link underline="hover" color="inherit" href="#">
             Home
           </Link>
-          <Link underline="hover" color="inherit" href="/dashboards/intranet">
+          <Link underline="hover" color="inherit" href="#">
             Dashboard
           </Link>
           <Typography color="inherit">Intranet</Typography>

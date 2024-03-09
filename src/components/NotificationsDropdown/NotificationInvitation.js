@@ -15,7 +15,7 @@ const NotificationInvitation = ({item}) => {
                 <Avatar src={item.user.profile_pic}/>
             </ListItemAvatar>
             <ListItemText>
-                <Link underline={"none"} href="#/">{item.user.name}</Link> has sent you a group invitation for Global Health
+                <Link underline={"none"} href="#">{item.user.name}</Link> has sent you a group invitation for Global Health
                 <Typography component="span" sx={{
                     display: 'flex',
                     fontSize: '90%',

@@ -16,7 +16,7 @@ const NotificationPost = ({item}) => {
                 <Avatar src={item.user.profile_pic}/>
             </ListItemAvatar>
             <ListItemText>
-                <Link underline={"none"} href="#/">{item.user.name}</Link> has recently posted an album
+                <Link underline={"none"} href="#">{item.user.name}</Link> has recently posted an album
                 <Typography component="span" sx={{
                     display: 'flex',
                     fontSize: '90%',

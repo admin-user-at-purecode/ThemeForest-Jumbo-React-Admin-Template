@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import Div from "../../Div/Div";
+import Div from "../Div/Div";
 
 const ListHeader = ({ title, count, action }) => {
   return (

@@ -17,7 +17,7 @@ const NotificationSharedPost = ({item}) => {
                 <Avatar src={item.user.profile_pic}/>
             </ListItemAvatar>
             <ListItemText>
-                <Link underline={"none"} href="#/">{item.user.name}</Link> has shared {item.metaData.post.owner.name}'s post
+                <Link underline={"none"} href="#">{item.user.name}</Link> has shared {item.metaData.post.owner.name}'s post
                 <Typography component="span" sx={{
                     display: 'flex',
                     fontSize: '90%',

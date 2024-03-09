@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ProductAvatars from "./components/ProductAvatars";
-import CheckboxList from "./components/CheckboxList";
+import ProductAvatars from "./ProductAvatars";
+import CheckboxList from "./CheckboxList";
 import { Button, Popover } from "@mui/material";
 import Div from "../Div/Div";
 

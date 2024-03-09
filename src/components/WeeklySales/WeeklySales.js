@@ -3,7 +3,7 @@ import ProductSalesList from "./ProductSalesList";
 import { productsList } from "../../mock_data/productsList";
 import ProductSelectionControl from "./ProductSelectionControl";
 import { reducer } from "./reducer";
-import ChartReport from "./components/ChartReport";
+import ChartReport from "./ChartReport";
 import { IconButton, Tooltip, Typography } from "@mui/material";
 import CardQuick from "../CardQuick/CardQuick";
 import InsertChartOutlinedIcon from "@mui/icons-material/InsertChartOutlined";

@@ -6,13 +6,10 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import Span from "../../Span/Span";
-import Div from "../../Div/Div";
+import Span from "../Span/Span";
+import Div from "../Div/Div";
+
 const FeedPhotoUpload = ({ feed }) => {
-  console.log(
-    feed.metaData.user.profile_pic,
-    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-  );
   return (
     <ListItem alignItems={"flex-start"} sx={{ px: 3 }}>
       <ListItemAvatar sx={{ minWidth: 65 }}>

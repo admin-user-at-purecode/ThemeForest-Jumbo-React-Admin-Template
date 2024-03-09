@@ -7,9 +7,9 @@ import TabList from "@mui/lab/TabList";
 import Divider from "@mui/material/Divider";
 import CardQuick from "../CardQuick/CardQuick";
 import Scrollbar from "../Scrollbar/Scrollbar";
-import MessagesList from "./components/FeedMessages/MessagesList";
-import FeedsList from "./components/FeedsList";
-import InvitationsList from "./components/InvitationsList";
+import MessagesList from "../FeedMessages/MessagesList";
+import FeedsList from "./FeedsList";
+import InvitationsList from "./InvitationsList";
 import { latestNotifications } from "../../mock_data/latestNotifications";
 import { cardTitles } from "../../mock_data/cardTitles";
 
@@ -79,7 +79,7 @@ const LatestAlerts = ({ scrollHeight }) => {
       </TabContext>
       <Divider />
       <CardActions sx={{ py: (theme) => theme.spacing(1.5) }}>
-        <Link href={"#/"} underline={"none"} lineHeight={1.2}>
+        <Link href={"#"} underline={"none"} lineHeight={1.2}>
           Learn More
         </Link>
       </CardActions>
