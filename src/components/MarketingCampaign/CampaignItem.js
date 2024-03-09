@@ -30,6 +30,5 @@ const CampaignItem = ({item}) => {
         </ListItemButton>
     );
 };
-/* Todo item prop define */
 
 export default CampaignItem;

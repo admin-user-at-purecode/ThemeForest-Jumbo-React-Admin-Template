@@ -56,5 +56,5 @@ const TaskItem = ({task}) => {
             </ListItemButton>
     );
 };
-/* Todo item prop define */
+
 export default TaskItem;

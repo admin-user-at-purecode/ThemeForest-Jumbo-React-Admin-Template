@@ -36,5 +36,5 @@ const ActivitiesItem = ({item}) => {
         </TimelineItem>
     );
 };
-/* Todo item prop define */
+
 export default ActivitiesItem;

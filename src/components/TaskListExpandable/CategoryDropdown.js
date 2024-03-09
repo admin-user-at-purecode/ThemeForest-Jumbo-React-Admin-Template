@@ -18,5 +18,5 @@ const CategoryDropdown = ({ activeCategory, onCategoryChange }) => {
     </Select>
   );
 };
-/* Todo activityCategory or onCategoryChange prop define */
+
 export default CategoryDropdown;

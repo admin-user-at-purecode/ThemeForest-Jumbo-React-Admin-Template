@@ -30,5 +30,5 @@ const PictureItem = ({ item }) => {
     </ImageListItem>
   );
 };
-/* Todo item prop define */
+
 export default PictureItem;

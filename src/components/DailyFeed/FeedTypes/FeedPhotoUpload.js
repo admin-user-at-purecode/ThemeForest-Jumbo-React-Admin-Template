@@ -50,5 +50,5 @@ const FeedPhotoUpload = ({ feed }) => {
     </ListItem>
   );
 };
-/* Todo feed prop define */
+
 export default FeedPhotoUpload;

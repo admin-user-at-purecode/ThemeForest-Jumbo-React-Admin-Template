@@ -13,5 +13,5 @@ const TaskList = ({tasks}) => {
         </List>
     );
 };
-/* Todo tasks prop define */
+
 export default TaskList;
