@@ -1,4 +1,3 @@
-import React from 'react';
 import {Cell, Pie, PieChart, ResponsiveContainer} from 'recharts';
 import List from "@mui/material/List";
 import {ListItem, ListItemIcon, ListItemText} from "@mui/material";
@@ -20,7 +19,7 @@ const ListItemInline = styled(ListItem)(({theme}) => ({
 
 const ChartAppUsers = () => {
     return (
-        <React.Fragment>
+        <>
             <ResponsiveContainer width="100%" height={140}>
                 <PieChart>
                     <Pie
@@ -70,7 +69,7 @@ const ChartAppUsers = () => {
                     <ListItemText primary="Web"/>
                 </ListItemInline>
             </List>
-        </React.Fragment>
+        </>
     );
 };
 

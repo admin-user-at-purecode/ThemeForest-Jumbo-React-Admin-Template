@@ -6,8 +6,8 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import Span from "../../Span/Span";
-import Div from "../../Div/Div";
+import Span from "../Span/Span";
+import Div from "../Div/Div";
 
 const FeedPhotoUpload = ({ feed }) => {
   return (

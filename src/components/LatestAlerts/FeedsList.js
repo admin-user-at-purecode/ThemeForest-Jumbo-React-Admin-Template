@@ -1,8 +1,8 @@
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import FeedInvitation from "../DailyFeed/FeedTypes/FeedInvitation";
-import FeedPhotoUpload from "../DailyFeed/FeedTypes/FeedPhotoUpload";
-import FeedSharedPost from "../DailyFeed/FeedTypes/FeedSharedPost";
+import FeedInvitation from "../FeedTypes/FeedInvitation";
+import FeedPhotoUpload from "../FeedTypes/FeedPhotoUpload";
+import FeedSharedPost from "../FeedTypes/FeedSharedPost";
 import ListHeader from "./ListHeader";
 
 const feedTypes = {

@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import Span from "../../Span/Span";
+import Span from "../Span/Span";
 
 const FeedInvitation = ({ feed }) => {
   return (

@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import BookmarkAddTwoToneIcon from "@mui/icons-material/BookmarkAddTwoTone";
-import Span from "../../Span/Span";
+import Span from "../Span/Span";
 
 const FeedSharedPost = ({ feed }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);

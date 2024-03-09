@@ -1,7 +1,7 @@
 import List from "@mui/material/List";
 import Button from "@mui/material/Button";
 import ListHeader from "./ListHeader";
-import FeedInvitation from "../DailyFeed/FeedTypes/FeedInvitation";
+import FeedInvitation from "../FeedTypes/FeedInvitation";
 
 const InvitationsList = ({ notifications, count, noHeader }) => {
   return (
