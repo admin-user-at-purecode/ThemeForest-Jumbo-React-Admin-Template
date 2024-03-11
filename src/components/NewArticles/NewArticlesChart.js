@@ -1,6 +1,6 @@
 import React from 'react';
 import {Area, AreaChart, ResponsiveContainer, XAxis} from 'recharts';
-import {newsArticles} from "./data";
+import {newsArticles} from "../../mock_data/newsArticles";
 
 const NewArticlesChart = () => {
     return (
