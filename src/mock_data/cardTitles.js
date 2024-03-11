@@ -1,0 +1,33 @@
+export const cardTitles = {
+  widgets: {
+    title: {
+      salesReports: "This year sales report",
+      orderReports: "Orders",
+      creditScore: "Credit Score",
+      trafficAnalysis: "Traffic Analysis",
+      pageViews: "Page Views",
+      orders1: "Orders",
+      stock: "Stock items",
+    },
+    subheader: {
+      latestMonthSales: "Daily traffic",
+      onlineSignups: "Online signups",
+      newVisitors: "New visitors",
+      totalRevenueYear: "Revenue this year",
+      orderReports: "Received vs Pending",
+      trafficAnalysis: "Device based traffic analysis",
+      objectCountOrders: "Orders this year",
+      objectCountRevenues: "Revenue this year",
+      objectCountVisits: "Visits this year",
+      objectCountQueries: "Queries this year",
+      onlineSignups1: "Online signups",
+      revenueThisYear: "Revenue this year",
+      emailCampaign: "Total emails sent",
+      avgDailyTraffic: "Daily traffic",
+      newSubscribers: "New Subscribers",
+      newAuthors: "New Authors",
+      newArticles: "New articles",
+      activeUsers: "Active users",
+    },
+  },
+};
